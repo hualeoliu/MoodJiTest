@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */; };
+		3A8884CF2B287C7200C49B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884CE2B287C7200C49B69 /* ContentView.swift */; };
+		3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D02B287C7300C49B69 /* Assets.xcassets */; };
+		3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */; };
+		3A8884D92B287C7300C49B69 /* MoodJiTest WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A8884DE2B287C7400C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884DD2B287C7400C49B69 /* Assets.xcassets */; };
+		3A8884E52B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A8884EA2B287C7400C49B69 /* MoodJiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884E92B287C7400C49B69 /* MoodJiTestApp.swift */; };
+		3A8884EC2B287C7400C49B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884EB2B287C7400C49B69 /* ContentView.swift */; };
+		3A8884EE2B287C7400C49B69 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884ED2B287C7400C49B69 /* NotificationController.swift */; };
+		3A8884F02B287C7400C49B69 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884EF2B287C7400C49B69 /* NotificationView.swift */; };
+		3A8884F22B287C7400C49B69 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884F12B287C7400C49B69 /* ComplicationController.swift */; };
+		3A8884F42B287C7400C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884F32B287C7400C49B69 /* Assets.xcassets */; };
+		3A8884F72B287C7400C49B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884F62B287C7400C49B69 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A8884DA2B287C7300C49B69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A8884C12B287C7200C49B69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A8884D72B287C7300C49B69;
+			remoteInfo = "MoodJiTest WatchKit App";
+		};
+		3A8884E62B287C7400C49B69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A8884C12B287C7200C49B69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A8884E32B287C7400C49B69;
+			remoteInfo = "MoodJiTest WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A8884FF2B287C7400C49B69 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A8884E52B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8885032B287C7400C49B69 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3A8884D92B287C7300C49B69 /* MoodJiTest WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A8884C92B287C7200C49B69 /* MoodJiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodJiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJiTestApp.swift; sourceTree = "<group>"; };
+		3A8884CE2B287C7200C49B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A8884D02B287C7300C49B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A8884D52B287C7300C49B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoodJiTest WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8884DD2B287C7400C49B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A8884DF2B287C7400C49B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MoodJiTest WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8884E92B287C7400C49B69 /* MoodJiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJiTestApp.swift; sourceTree = "<group>"; };
+		3A8884EB2B287C7400C49B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A8884ED2B287C7400C49B69 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3A8884EF2B287C7400C49B69 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		3A8884F12B287C7400C49B69 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		3A8884F32B287C7400C49B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A8884F62B287C7400C49B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A8884F82B287C7400C49B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8884F92B287C7400C49B69 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A8884C62B287C7200C49B69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8884E12B287C7400C49B69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A8884C02B287C7200C49B69 = {
+			isa = PBXGroup;
+			children = (
+				3A8884CB2B287C7200C49B69 /* MoodJiTest */,
+				3A8884DC2B287C7300C49B69 /* MoodJiTest WatchKit App */,
+				3A8884E82B287C7400C49B69 /* MoodJiTest WatchKit Extension */,
+				3A8884CA2B287C7200C49B69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A8884CA2B287C7200C49B69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884C92B287C7200C49B69 /* MoodJiTest.app */,
+				3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */,
+				3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A8884CB2B287C7200C49B69 /* MoodJiTest */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */,
+				3A8884CE2B287C7200C49B69 /* ContentView.swift */,
+				3A8884D02B287C7300C49B69 /* Assets.xcassets */,
+				3A8884D52B287C7300C49B69 /* Info.plist */,
+				3A8884D22B287C7300C49B69 /* Preview Content */,
+			);
+			path = MoodJiTest;
+			sourceTree = "<group>";
+		};
+		3A8884D22B287C7300C49B69 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A8884DC2B287C7300C49B69 /* MoodJiTest WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884DD2B287C7400C49B69 /* Assets.xcassets */,
+				3A8884DF2B287C7400C49B69 /* Info.plist */,
+			);
+			path = "MoodJiTest WatchKit App";
+			sourceTree = "<group>";
+		};
+		3A8884E82B287C7400C49B69 /* MoodJiTest WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884E92B287C7400C49B69 /* MoodJiTestApp.swift */,
+				3A8884EB2B287C7400C49B69 /* ContentView.swift */,
+				3A8884ED2B287C7400C49B69 /* NotificationController.swift */,
+				3A8884EF2B287C7400C49B69 /* NotificationView.swift */,
+				3A8884F12B287C7400C49B69 /* ComplicationController.swift */,
+				3A8884F32B287C7400C49B69 /* Assets.xcassets */,
+				3A8884F82B287C7400C49B69 /* Info.plist */,
+				3A8884F92B287C7400C49B69 /* PushNotificationPayload.apns */,
+				3A8884F52B287C7400C49B69 /* Preview Content */,
+			);
+			path = "MoodJiTest WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		3A8884F52B287C7400C49B69 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3A8884F62B287C7400C49B69 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A8884C82B287C7200C49B69 /* MoodJiTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A8885042B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest" */;
+			buildPhases = (
+				3A8884C52B287C7200C49B69 /* Sources */,
+				3A8884C62B287C7200C49B69 /* Frameworks */,
+				3A8884C72B287C7200C49B69 /* Resources */,
+				3A8885032B287C7400C49B69 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A8884DB2B287C7300C49B69 /* PBXTargetDependency */,
+			);
+			name = MoodJiTest;
+			productName = MoodJiTest;
+			productReference = 3A8884C92B287C7200C49B69 /* MoodJiTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A8884D72B287C7300C49B69 /* MoodJiTest WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A8885002B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest WatchKit App" */;
+			buildPhases = (
+				3A8884D62B287C7300C49B69 /* Resources */,
+				3A8884FF2B287C7400C49B69 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A8884E72B287C7400C49B69 /* PBXTargetDependency */,
+			);
+			name = "MoodJiTest WatchKit App";
+			productName = "MoodJiTest WatchKit App";
+			productReference = 3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3A8884E32B287C7400C49B69 /* MoodJiTest WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A8884FC2B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest WatchKit Extension" */;
+			buildPhases = (
+				3A8884E02B287C7400C49B69 /* Sources */,
+				3A8884E12B287C7400C49B69 /* Frameworks */,
+				3A8884E22B287C7400C49B69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoodJiTest WatchKit Extension";
+			productName = "MoodJiTest WatchKit Extension";
+			productReference = 3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A8884C12B287C7200C49B69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3A8884C82B287C7200C49B69 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3A8884D72B287C7300C49B69 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3A8884E32B287C7400C49B69 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 3A8884C42B287C7200C49B69 /* Build configuration list for PBXProject "MoodJiTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A8884C02B287C7200C49B69;
+			productRefGroup = 3A8884CA2B287C7200C49B69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A8884C82B287C7200C49B69 /* MoodJiTest */,
+				3A8884D72B287C7300C49B69 /* MoodJiTest WatchKit App */,
+				3A8884E32B287C7400C49B69 /* MoodJiTest WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A8884C72B287C7200C49B69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */,
+				3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8884D62B287C7300C49B69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8884DE2B287C7400C49B69 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8884E22B287C7400C49B69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8884F72B287C7400C49B69 /* Preview Assets.xcassets in Resources */,
+				3A8884F42B287C7400C49B69 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A8884C52B287C7200C49B69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8884CF2B287C7200C49B69 /* ContentView.swift in Sources */,
+				3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A8884E02B287C7400C49B69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8884EE2B287C7400C49B69 /* NotificationController.swift in Sources */,
+				3A8884EC2B287C7400C49B69 /* ContentView.swift in Sources */,
+				3A8884F22B287C7400C49B69 /* ComplicationController.swift in Sources */,
+				3A8884EA2B287C7400C49B69 /* MoodJiTestApp.swift in Sources */,
+				3A8884F02B287C7400C49B69 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A8884DB2B287C7300C49B69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A8884D72B287C7300C49B69 /* MoodJiTest WatchKit App */;
+			targetProxy = 3A8884DA2B287C7300C49B69 /* PBXContainerItemProxy */;
+		};
+		3A8884E72B287C7400C49B69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A8884E32B287C7400C49B69 /* MoodJiTest WatchKit Extension */;
+			targetProxy = 3A8884E62B287C7400C49B69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A8884FA2B287C7400C49B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A8884FB2B287C7400C49B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3A8884FD2B287C7400C49B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MoodJiTest WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		3A8884FE2B287C7400C49B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MoodJiTest WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		3A8885012B287C7400C49B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
+				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		3A8885022B287C7400C49B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
+				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		3A8885052B287C7400C49B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MoodJiTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A8885062B287C7400C49B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
+				DEVELOPMENT_TEAM = W3R22EYM38;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MoodJiTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A8884C42B287C7200C49B69 /* Build configuration list for PBXProject "MoodJiTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8884FA2B287C7400C49B69 /* Debug */,
+				3A8884FB2B287C7400C49B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A8884FC2B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8884FD2B287C7400C49B69 /* Debug */,
+				3A8884FE2B287C7400C49B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A8885002B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8885012B287C7400C49B69 /* Debug */,
+				3A8885022B287C7400C49B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A8885042B287C7400C49B69 /* Build configuration list for PBXNativeTarget "MoodJiTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8885052B287C7400C49B69 /* Debug */,
+				3A8885062B287C7400C49B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A8884C12B287C7200C49B69 /* Project object */;
+}
