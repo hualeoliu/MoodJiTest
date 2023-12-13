@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var curMode
+
+    init() {
+        
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            Setting()
+                .tabItem {
+                    Image(uiImage: UIImage(named: "tab1")!.withRenderingMode(.alwaysTemplate))
+                }
+            
+            Text("第二页")
+                .tabItem {
+                    Image(uiImage: UIImage(named: "tab2")!.withRenderingMode(.alwaysTemplate))
+                }
+            
+            Setting()
+                .tabItem {
+                    Image(uiImage: UIImage(named: "tab3")!.withRenderingMode(.alwaysTemplate))
+                }
+        }
+        .accentColor(curMode == .dark ? ColorStylesDark.init().tabitemSelected : ColorStylesLight.init().tabitemSelected)
+        .onAppear(perform: {
+
+        })
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

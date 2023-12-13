@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A401A332B295ACE00914205 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A322B295ACE00914205 /* TextStyles.swift */; };
+		3A401A352B2963E000914205 /* ScheduleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A342B2963E000914205 /* ScheduleSet.swift */; };
+		3A401A372B29C86900914205 /* GlobleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A362B29C86900914205 /* GlobleTools.swift */; };
 		3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */; };
 		3A8884CF2B287C7200C49B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884CE2B287C7200C49B69 /* ContentView.swift */; };
 		3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D02B287C7300C49B69 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 		3A8884F22B287C7400C49B69 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8884F12B287C7400C49B69 /* ComplicationController.swift */; };
 		3A8884F42B287C7400C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884F32B287C7400C49B69 /* Assets.xcassets */; };
 		3A8884F72B287C7400C49B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884F62B287C7400C49B69 /* Preview Assets.xcassets */; };
+		3A8885092B2881E300C49B69 /* ColorStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8885072B2881E300C49B69 /* ColorStyles.swift */; };
+		3A88850A2B2881E300C49B69 /* SizeStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8885082B2881E300C49B69 /* SizeStyles.swift */; };
+		3A88850C2B28910200C49B69 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88850B2B28910200C49B69 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A401A322B295ACE00914205 /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		3A401A342B2963E000914205 /* ScheduleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSet.swift; sourceTree = "<group>"; };
+		3A401A362B29C86900914205 /* GlobleTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleTools.swift; sourceTree = "<group>"; };
 		3A8884C92B287C7200C49B69 /* MoodJiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodJiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJiTestApp.swift; sourceTree = "<group>"; };
 		3A8884CE2B287C7200C49B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 		3A8884F62B287C7400C49B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A8884F82B287C7400C49B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8884F92B287C7400C49B69 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3A8885072B2881E300C49B69 /* ColorStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyles.swift; sourceTree = "<group>"; };
+		3A8885082B2881E300C49B69 /* SizeStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeStyles.swift; sourceTree = "<group>"; };
+		3A88850B2B28910200C49B69 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,12 @@
 			children = (
 				3A8884CC2B287C7200C49B69 /* MoodJiTestApp.swift */,
 				3A8884CE2B287C7200C49B69 /* ContentView.swift */,
+				3A88850B2B28910200C49B69 /* Setting.swift */,
+				3A401A342B2963E000914205 /* ScheduleSet.swift */,
+				3A8885072B2881E300C49B69 /* ColorStyles.swift */,
+				3A8885082B2881E300C49B69 /* SizeStyles.swift */,
+				3A401A322B295ACE00914205 /* TextStyles.swift */,
+				3A401A362B29C86900914205 /* GlobleTools.swift */,
 				3A8884D02B287C7300C49B69 /* Assets.xcassets */,
 				3A8884D52B287C7300C49B69 /* Info.plist */,
 				3A8884D22B287C7300C49B69 /* Preview Content */,
@@ -308,8 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A401A352B2963E000914205 /* ScheduleSet.swift in Sources */,
+				3A401A332B295ACE00914205 /* TextStyles.swift in Sources */,
 				3A8884CF2B287C7200C49B69 /* ContentView.swift in Sources */,
+				3A88850C2B28910200C49B69 /* Setting.swift in Sources */,
+				3A8885092B2881E300C49B69 /* ColorStyles.swift in Sources */,
+				3A88850A2B2881E300C49B69 /* SizeStyles.swift in Sources */,
 				3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */,
+				3A401A372B29C86900914205 /* GlobleTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +585,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,7 +608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
