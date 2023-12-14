@@ -12,9 +12,7 @@ struct Setting: View {
     @EnvironmentObject var coloState : MainColorModel
     
     let options = ["Auto", "Light", "Dark"]
-    
     @State private var isPopoverVisible = false
-
     
     var body: some View {
         

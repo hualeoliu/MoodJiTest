@@ -33,7 +33,7 @@ struct ContentView: View {
         }
         .accentColor(curMode == .dark ? ColorStylesDark().tabitemSelected : ColorStylesLight().tabitemSelected)
         .onAppear(perform: {
-
+            __UserDefault.setValue(1, forKey: firstOpen)
         })
         
     }

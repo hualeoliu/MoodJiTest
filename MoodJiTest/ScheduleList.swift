@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+var listBlock: (()->())?
 struct ScheduleList: View {
     @EnvironmentObject var coloState : MainColorModel
-    
+    @State private var isPopoverVisible = false
+
     @State var curArr = []
 
     var body: some View {
@@ -78,7 +80,7 @@ struct ScheduleList: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: SizeStylesPro().spacing12, content: {
                     ForEach(0..<curArr.count, id: \.self) { idx in
-                        SchedulListCell(coloState: coloState, dic: curArr[idx] as! [String : Any])
+                        SchedulListCell(coloState: coloState, dic: curArr[idx] as! [String : Any], dicIdx: idx)
                     }
                     
                     HStack(alignment: .center, spacing: 4, content: {
@@ -90,7 +92,10 @@ struct ScheduleList: View {
                     .font(TextStyles.subHeadlineSemibold)
                     .frame(height: 42)
                     .onTapGesture {
-                        dataAddDo()
+                        isPopoverVisible.toggle()
+                    }
+                    .popover(isPresented: $isPopoverVisible) {
+                        ScheduleSet(isPresented: $isPopoverVisible, arrIdx: curArr.count).environmentObject(self.coloState)
                     }
                 })
                 .padding(.top, SizeStylesPro().padding8)
@@ -105,22 +110,25 @@ struct ScheduleList: View {
         .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
         .ignoresSafeArea()
         .onAppear(perform: {
+            __dateSir.dateFormat = "hh:mm"
+            __dateSir.locale = Locale(identifier: "da")
+            
             dataLoadDo()
+            listBlock = {
+                print("listbloc")
+                uiDo {
+                    dataLoadDo()
+                }
+            }
         })
     }
     
     func dataAddDo() {
-        let dic = ["days": [0, 1, 3], "start": "09:30", "end": "16:00"] as [String : Any]
-        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Any] {
-            print("color 设置 \(t)")
-            curArr = t
-        }
-        curArr += [dic]
-        __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
-        __UserDefault.synchronize()
+        
     }
     
     func dataLoadDo() {
+        curArr.removeAll()
         if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Any] {
             print("color 设置 \(t.count)")
             curArr = t
@@ -135,13 +143,14 @@ struct SchedulListCell: View {
 
     @State private var isPopoverVisible = false
     @State var dic : [String : Any]
+    @State var dicIdx : Int
     let weekStrs = [0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sta", 6: "Sun"]
     
     func weekStrGet(arr: [Int]) -> String {
-        if arr == [5, 6] {
+        if arr == [5, 6] || arr == [6, 5] {
             return "Weekend"
         }
-        if arr == [0, 1, 2, 3, 4] {
+        if arr.count == 5 && !arr.contains(5) && !arr.contains(6) {
             return "Weekdays"
         }
         if arr.count == 1 {
@@ -169,7 +178,7 @@ struct SchedulListCell: View {
             Text(weekStrGet(arr: dic["days"] as! [Int]))
                 .font(TextStyles.subHeadlineSemibold)
             HStack {
-                Text("\(dic["start"] as! String) - \(dic["end"] as! String) ")
+                Text("\(__dateSir.string(from: dic["start"] as! Date)) - \(__dateSir.string(from: dic["end"] as! Date)) ")
                     .font(TextStyles.title3Bold)
                     .foregroundColor(Color(UIColor.label))
                 Spacer()
@@ -180,7 +189,7 @@ struct SchedulListCell: View {
                         .font(TextStyles.subHeadlineSemibold)
                 })
                 .popover(isPresented: $isPopoverVisible) {
-                    ScheduleSet(isPresented: $isPopoverVisible, mDic: $dic).environmentObject(self.coloState)
+                    ScheduleSet(isPresented: $isPopoverVisible, arrIdx: dicIdx).environmentObject(self.coloState)
                 }
             }
         }

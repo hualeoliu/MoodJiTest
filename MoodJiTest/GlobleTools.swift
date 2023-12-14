@@ -10,7 +10,7 @@ import SwiftUI
 
 class MainColorModel: ObservableObject {
     @Published var colorOption = 0
-    @Published var timeType = 0
+    @Published var timeType = 0// sleep or work
 }
 
 let mainColorSet = "mainColorSet"
@@ -24,24 +24,14 @@ var winW  = winSize.width
 var winH = winSize.height
 
 var __UserDefault = UserDefaults.standard
-func __CurVc() -> UIViewController {
-    if let viewController = UIApplication.shared.windows.first?.rootViewController {
-        // 在此处使用 viewController
-        // viewController 即为当前控制器
-        print("当前控制器: \(viewController)")
-        return viewController
-    }
-    return UIViewController()
+var __dateSir = DateFormatter()
+
+func uiDo(_ doSome: @escaping (()->())) {
+    DispatchQueue.main.async(execute: doSome)
 }
-
-
-struct CurrentViewControllerGetter: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> UIViewController {
-        return UIViewController()
-    }
-
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        // 获取当前控制器
-        
-    }
+func uiAfterDo(_ afterTime: Double, _ doSome: @escaping (()->())) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + afterTime, execute: doSome)
+}
+func afterDo(_ afterTime: Double, _ doSome: @escaping (()->())) {
+    DispatchQueue.global().asyncAfter(deadline: .now() + afterTime, execute: doSome)
 }
