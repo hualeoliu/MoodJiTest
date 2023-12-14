@@ -31,7 +31,7 @@ struct ContentView: View {
                     Image(uiImage: UIImage(named: "tab3")!.withRenderingMode(.alwaysTemplate))
                 }
         }
-        .accentColor(curMode == .dark ? ColorStylesDark.init().tabitemSelected : ColorStylesLight.init().tabitemSelected)
+        .accentColor(curMode == .dark ? ColorStylesDark().tabitemSelected : ColorStylesLight().tabitemSelected)
         .onAppear(perform: {
 
         })

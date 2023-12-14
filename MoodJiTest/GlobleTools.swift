@@ -16,6 +16,7 @@ class MainColorModel: ObservableObject {
 let mainColorSet = "mainColorSet"
 let sleepTimeArr = "sleepTimeArr"
 let workTimeArr = "workTimeArr"
+let firstOpen = "firstOpen"
 
 var winBounds = UIScreen.main.bounds
 var winSize = winBounds.size

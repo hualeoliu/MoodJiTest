@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A144C322B2B11E300496646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A144C312B2B11E300496646 /* LaunchScreen.storyboard */; };
 		3A401A332B295ACE00914205 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A322B295ACE00914205 /* TextStyles.swift */; };
 		3A401A352B2963E000914205 /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A342B2963E000914205 /* ScheduleList.swift */; };
 		3A401A372B29C86900914205 /* GlobleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A362B29C86900914205 /* GlobleTools.swift */; };
@@ -28,6 +29,7 @@
 		3A8885092B2881E300C49B69 /* ColorStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8885072B2881E300C49B69 /* ColorStyles.swift */; };
 		3A88850A2B2881E300C49B69 /* SizeStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8885082B2881E300C49B69 /* SizeStyles.swift */; };
 		3A88850C2B28910200C49B69 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88850B2B28910200C49B69 /* Setting.swift */; };
+		3A962DF62B2B0332009E05E6 /* Guides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A962DF52B2B0332009E05E6 /* Guides.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A144C312B2B11E300496646 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A401A322B295ACE00914205 /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		3A401A342B2963E000914205 /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		3A401A362B29C86900914205 /* GlobleTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleTools.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		3A8885072B2881E300C49B69 /* ColorStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyles.swift; sourceTree = "<group>"; };
 		3A8885082B2881E300C49B69 /* SizeStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeStyles.swift; sourceTree = "<group>"; };
 		3A88850B2B28910200C49B69 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		3A962DF52B2B0332009E05E6 /* Guides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guides.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +151,12 @@
 				3A88850B2B28910200C49B69 /* Setting.swift */,
 				3A401A342B2963E000914205 /* ScheduleList.swift */,
 				3A401A382B29D70000914205 /* ScheduleSet.swift */,
+				3A962DF52B2B0332009E05E6 /* Guides.swift */,
 				3A8885072B2881E300C49B69 /* ColorStyles.swift */,
 				3A8885082B2881E300C49B69 /* SizeStyles.swift */,
 				3A401A322B295ACE00914205 /* TextStyles.swift */,
 				3A401A362B29C86900914205 /* GlobleTools.swift */,
+				3A144C312B2B11E300496646 /* LaunchScreen.storyboard */,
 				3A8884D02B287C7300C49B69 /* Assets.xcassets */,
 				3A8884D52B287C7300C49B69 /* Info.plist */,
 				3A8884D22B287C7300C49B69 /* Preview Content */,
@@ -300,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A144C322B2B11E300496646 /* LaunchScreen.storyboard in Resources */,
 				3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */,
 				3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */,
 			);
@@ -337,6 +344,7 @@
 				3A88850A2B2881E300C49B69 /* SizeStyles.swift in Sources */,
 				3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */,
 				3A401A392B29D70000914205 /* ScheduleSet.swift in Sources */,
+				3A962DF62B2B0332009E05E6 /* Guides.swift in Sources */,
 				3A401A372B29C86900914205 /* GlobleTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
