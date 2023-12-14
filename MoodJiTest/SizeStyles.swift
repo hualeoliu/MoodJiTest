@@ -37,6 +37,7 @@ public protocol SizeStylesProtocal {
     
     var padding4: CGFloat { get }
     var padding8: CGFloat { get }
+    var spacing12: CGFloat { get }
     var spacing16: CGFloat { get }
 }
 
@@ -70,6 +71,7 @@ public class SizeStylesPro: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
 
 }
@@ -104,8 +106,8 @@ public class SizeStylesProMax: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
-
 }
 
 public class SizeStylesMini: SizeStylesProtocal {
@@ -139,8 +141,8 @@ public class SizeStylesMini: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
-
 }
 
 public class SizeStylesWatch45: SizeStylesProtocal {
@@ -173,8 +175,8 @@ public class SizeStylesWatch45: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
-
 }
 
 public class SizeStylesWatch49: SizeStylesProtocal {
@@ -207,8 +209,8 @@ public class SizeStylesWatch49: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
-
 }
 
 public class SizeStylesWatch41: SizeStylesProtocal {
@@ -241,8 +243,8 @@ public class SizeStylesWatch41: SizeStylesProtocal {
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
+    public let spacing12:CGFloat = 12
     public let spacing16:CGFloat = 16
-
 }
 
 

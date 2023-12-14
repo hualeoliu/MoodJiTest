@@ -11,7 +11,7 @@ struct ContentView: View {
     @Environment(\.colorScheme) var curMode
 
     init() {
-        
+
     }
     
     var body: some View {

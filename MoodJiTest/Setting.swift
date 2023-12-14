@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct Setting: View {
     @Environment(\.colorScheme) var curMode
     @EnvironmentObject var coloState : MainColorModel
@@ -17,9 +15,6 @@ struct Setting: View {
     
     @State private var isPopoverVisible = false
 
-    init() {
-
-    }
     
     var body: some View {
         
@@ -77,7 +72,7 @@ struct Setting: View {
                         .cornerRadius(SizeStylesPro().spacing16)
                     })
                     .popover(isPresented: $isPopoverVisible) {
-                        ScheduleSet()
+                        ScheduleList().environmentObject(self.coloState)
                     }
                     
                 })
@@ -99,11 +94,3 @@ struct Setting: View {
     }
 }
 
-struct Setting_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            Setting()
-            Setting()
-        }
-    }
-}
