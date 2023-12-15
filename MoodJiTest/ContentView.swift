@@ -16,7 +16,10 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            Setting()
+            NavigationView {
+                Text("Main")
+            }
+            .navigationTitle("Main")
                 .tabItem {
                     Image(uiImage: UIImage(named: "tab1")!.withRenderingMode(.alwaysTemplate))
                 }
