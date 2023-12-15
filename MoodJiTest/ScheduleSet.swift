@@ -13,7 +13,7 @@ struct ScheduleSet: View {
     @State private var showingAlert = false
     
     @State var arrIdx: Int
-    @State var mDic = [String: Any]()
+    @State var mDic = ScheduleBean()
     let weekStrs = ["M", "T", "W", "T", "F", "S", "S"]
     
     @State private var timeStart = Date()
@@ -24,7 +24,7 @@ struct ScheduleSet: View {
     
     
     func isDaySelected(idx: Int) -> Bool {
-        let days = mDic["days"] as? [Int]
+        let days = mDic.days
         if let t = days {
             return t.contains(idx)
         }
@@ -32,7 +32,7 @@ struct ScheduleSet: View {
     }
     
     func dayTapDo(idx: Int) {
-        var days = mDic["days"] as? [Int]
+        var days = mDic.days
         if let t = days {
             if t.contains(idx) {
                 let selectedIdx = t.firstIndex(of: idx)!
@@ -41,9 +41,9 @@ struct ScheduleSet: View {
             }else{
                 days! += [idx]
             }
-            mDic["days"] = days
+            mDic.days = days
         }else{
-            mDic["days"] = [idx]
+            mDic.days = [idx]
         }
     }
     
@@ -53,16 +53,19 @@ struct ScheduleSet: View {
             if arrIdx == t.count {//add
                 
             }else{
-                mDic = t[arrIdx] as! [String : Any]
+                do{
+                    mDic = try JSONDecoder().decode(ScheduleBean.self, from: t[arrIdx] as! Data)
+                 }catch{
+                 }
             }
         }
         
-        timeStart = mDic["start"] as? Date ?? Date()
-        timeEnd = mDic["end"] as? Date ?? Date()
+        timeStart = mDic.start ?? Date()
+        timeEnd = mDic.end ?? Date()
     }
     
     func okDo() -> Bool {
-        var days = mDic["days"] as? [Int]
+        var days = mDic.days
         if let t = days {
             if t.count == 0 {
                 print("请至少选择一天")
@@ -73,20 +76,27 @@ struct ScheduleSet: View {
             return false
         }
         
-        var curArr = [Any]()
-        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Any] {
-            print("color 设置 \(t)")
-            curArr = t
-            if arrIdx == t.count {//add
-                curArr += [mDic]
+        var curArr = [Data]()
+        let encoder = JSONEncoder()
+        do{
+            let data = try encoder.encode(mDic)
+            if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Data] {
+                print("color 设置 \(t)")
+                curArr = t
+                if arrIdx == t.count {//add
+                    curArr += [data]
+                }else{
+                    curArr[arrIdx] = data
+                }
             }else{
-                curArr[arrIdx] = mDic
+                curArr += [data]
             }
-        }else{
-            curArr += [mDic]
+            __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
+            __UserDefault.synchronize()
+            
+        } catch {
+            print("转换失败: \(error.localizedDescription)")
         }
-        __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
-        __UserDefault.synchronize()
         
         listBlock?()
         return true
@@ -228,10 +238,10 @@ struct ScheduleSet: View {
             dataLoadDo()
         })
         .onChange(of: timeStart, perform: { value in
-            mDic["start"] = value
+            mDic.start = value
         })
         .onChange(of: timeEnd, perform: { value in
-            mDic["end"] = value
+            mDic.end = value
         })
     }
     
