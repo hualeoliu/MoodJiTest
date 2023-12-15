@@ -18,7 +18,7 @@ struct Setting: View {
         
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
-                VStack(alignment: .leading, spacing: SizeStylesPro().spacing16, content: {
+                VStack(alignment: .leading, spacing: SizeStylesPro().spacingM.byScaleWidth(), content: {
                     VStack(alignment:.leading) {
                         HStack {
                             Image("set_appearance")
@@ -29,23 +29,23 @@ struct Setting: View {
                         Text("Set to Auto will follow system appearance")
                             .font(TextStyles.subHeadlineRegular)
                             .foregroundColor(Color(UIColor.secondaryLabel))
-                            .padding(.leading, SizeStylesPro().padding4)
+                            .padding(.leading, SizeStylesPro().paddingXxs.byScaleWidth())
                         Picker("Options", selection: $coloState.colorOption) {
                             ForEach(0..<options.count) { index in
                                 Text(options[index]).tag(index)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
-                        .padding(.top, SizeStylesPro().padding8)
+                        .padding(.top, SizeStylesPro().spacingXs.byScaleWidth())
                         .onChange(of: coloState.colorOption) { tag in
                             print("tag color  \(tag)")
                             __UserDefault.setValue(tag, forKey: mainColorSet)
                             __UserDefault.synchronize()
                         }
                     }
-                    .padding(SizeStylesPro().spacing16)
+                    .padding(SizeStylesPro().spacingM.byScaleWidth())
                     .background(Color(UIColor.secondarySystemGroupedBackground))
-                    .cornerRadius(SizeStylesPro().spacing16)
+                    .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
                     
                     Button(action: {
                         isPopoverVisible.toggle()
@@ -63,11 +63,11 @@ struct Setting: View {
                             Text("Set your schedule to know you better")
                                 .font(TextStyles.subHeadlineRegular)
                                 .foregroundColor(Color(UIColor.secondaryLabel))
-                                .padding(.leading, CGFloat(SizeStylesPro().padding4))
+                                .padding(.leading, CGFloat(SizeStylesPro().paddingXxs.byScaleWidth()))
                         }
-                        .padding(SizeStylesPro().spacing16)
+                        .padding(SizeStylesPro().spacingM.byScaleWidth())
                         .background(Color(UIColor.secondarySystemGroupedBackground))
-                        .cornerRadius(SizeStylesPro().spacing16)
+                        .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
                     })
                     .popover(isPresented: $isPopoverVisible) {
                         ScheduleList()
@@ -75,7 +75,7 @@ struct Setting: View {
                     }
                     
                 })
-                .padding(SizeStylesPro().spacing16)
+                .padding(SizeStylesPro().spacingM.byScaleWidth())
             })
             .background(Color(UIColor.systemGroupedBackground))
             .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))

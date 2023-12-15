@@ -35,9 +35,6 @@ public protocol SizeStylesProtocal {
     var spacingXxs: Double { get }
     var spacingXxxs: Double { get }
     
-    var padding4: CGFloat { get }
-    var padding8: CGFloat { get }
-    var spacing12: CGFloat { get }
 }
 
 public class SizeStylesPro: SizeStylesProtocal {
@@ -82,9 +79,7 @@ public class SizeStylesPro: SizeStylesProtocal {
     public let spacingXxs = 4.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
     
 }
 
@@ -116,9 +111,7 @@ public class SizeStylesProMax: SizeStylesProtocal {
     public let spacingXxs = 6.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
 }
 
 public class SizeStylesMini: SizeStylesProtocal {
@@ -149,19 +142,14 @@ public class SizeStylesMini: SizeStylesProtocal {
     public let spacingXxs = 3.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
 }
 
 extension Int {
     func byScaleWidth() -> CGFloat {//根据屏幕宽度适配
         return CGFloat(self)/393*winW
     }
-    
-//    func bySpecial() -> CGFloat {//特定
-//        return
-//    }
+
 }
 extension Double {
     func byScaleWidth() -> CGFloat {//根据屏幕宽度适配
@@ -169,6 +157,29 @@ extension Double {
     }
 }
 
+extension UIDevice {//根据设备类型
+    static func isX() -> Bool {
+        if winmax >= 812 {
+            return true
+        }
+        return false
+    }
+    
+    static func isiPad() -> Bool {
+        if UIDevice.current.model == "iPad" {
+            return true
+        }
+        return false
+    }
+    
+    static func isSimulator() -> Bool {
+        var isSim = false
+        #if arch(i386) || arch(x86_64)
+        isSim = true
+        #endif
+        return isSim
+    }
+}
 
 public class SizeStylesWatch45: SizeStylesProtocal {
     public init() {}
@@ -198,9 +209,7 @@ public class SizeStylesWatch45: SizeStylesProtocal {
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
 }
 
 public class SizeStylesWatch49: SizeStylesProtocal {
@@ -231,9 +240,7 @@ public class SizeStylesWatch49: SizeStylesProtocal {
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
 }
 
 public class SizeStylesWatch41: SizeStylesProtocal {
@@ -264,9 +271,7 @@ public class SizeStylesWatch41: SizeStylesProtocal {
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
-    public let padding4:CGFloat = 4
-    public let padding8:CGFloat = 8
-    public let spacing12:CGFloat = 12
+    
 }
 
 

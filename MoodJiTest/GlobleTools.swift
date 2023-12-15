@@ -22,6 +22,15 @@ var winBounds = UIScreen.main.bounds
 var winSize = winBounds.size
 var winW  = winSize.width
 var winH = winSize.height
+var winmin: CGFloat {
+    min(winW, winH)
+}
+var winmax: CGFloat {
+    max(winW, winH)
+}
+var isX: Bool {
+    winmax >= 812
+}
 
 var __UserDefault = UserDefaults.standard
 var __dateSir = DateFormatter()

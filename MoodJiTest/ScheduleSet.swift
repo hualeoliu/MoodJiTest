@@ -124,17 +124,17 @@ struct ScheduleSet: View {
                 VStack {
                     Image(coloState.timeType == 0 ? "schedule_sleep" : "schedule_work")
                     Text(coloState.timeType == 0 ? "SLEEP" : "WORK").font(TextStyles.headline).foregroundColor(Color(UIColor.label))
-                        .padding(.top, SizeStylesPro().padding8)
+                        .padding(.top, SizeStylesPro().spacingXs.byScaleWidth())
                     
                 }
                 Spacer()
             }
-            .padding(.top, SizeStylesPro().spacing12)
+            .padding(.top, SizeStylesPro().spacingS.byScaleWidth())
             
             Text("CHOOSE DAYS").font(TextStyles.subHeadline).foregroundColor(Color(UIColor.secondaryLabel))
                 .padding(.top, 24)
-                .padding(.bottom, SizeStylesPro().spacing12)
-                .padding(.leading, SizeStylesPro().padding8)
+                .padding(.bottom, SizeStylesPro().spacingS.byScaleWidth())
+                .padding(.leading, SizeStylesPro().spacingXs.byScaleWidth())
             
             HStack(alignment: .center, spacing: 0) {
                 ForEach(0..<weekStrs.count, id: \.self) { idx in
@@ -152,14 +152,14 @@ struct ScheduleSet: View {
                     }
                 }
             }
-            .padding(SizeStylesPro().spacing16)
+            .padding(SizeStylesPro().spacingM.byScaleWidth())
             .background(Color(UIColor.secondarySystemGroupedBackground))
-            .cornerRadius(SizeStylesPro().spacing16)
+            .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
             
             Text("TIME").font(TextStyles.subHeadline).foregroundColor(Color(UIColor.secondaryLabel))
                 .padding(.top, 24)
-                .padding(.bottom, SizeStylesPro().spacing12)
-                .padding(.leading, SizeStylesPro().padding8)
+                .padding(.bottom, SizeStylesPro().spacingS.byScaleWidth())
+                .padding(.leading, SizeStylesPro().spacingXs.byScaleWidth())
             
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
@@ -175,8 +175,8 @@ struct ScheduleSet: View {
                             canEnd = false
                         }
                 }
-                .padding(SizeStylesPro().spacing12)
-                .padding(.leading, SizeStylesPro().padding4).padding(.trailing, SizeStylesPro().padding4)
+                .padding(SizeStylesPro().spacingS.byScaleWidth())
+                .padding(.leading, SizeStylesPro().paddingXxs.byScaleWidth()).padding(.trailing, SizeStylesPro().paddingXxs.byScaleWidth())
                 
                 if canStart {
                     Rectangle().foregroundColor(Color(UIColor.systemFill)).frame(height: 1)
@@ -201,8 +201,8 @@ struct ScheduleSet: View {
                             canStart = false
                         }
                 }
-                .padding(SizeStylesPro().spacing12)
-                .padding(.leading, SizeStylesPro().padding4).padding(.trailing, SizeStylesPro().padding4)
+                .padding(SizeStylesPro().spacingS.byScaleWidth())
+                .padding(.leading, SizeStylesPro().paddingXxs.byScaleWidth()).padding(.trailing, SizeStylesPro().paddingXxs.byScaleWidth())
                 
                 if canEnd {
                     Rectangle().foregroundColor(Color(UIColor.systemFill)).frame(height: 1)
@@ -213,12 +213,12 @@ struct ScheduleSet: View {
                 }
             }
             .background(Color(UIColor.secondarySystemGroupedBackground))
-            .cornerRadius(SizeStylesPro().spacing16)
+            .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
             .animation(.easeIn)
             
             Spacer()
         }
-        .padding(SizeStylesPro().spacing16)
+        .padding(SizeStylesPro().spacingM.byScaleWidth())
         .background(Color(UIColor.systemGroupedBackground))
         .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
         .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)

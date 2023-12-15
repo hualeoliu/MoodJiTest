@@ -13,7 +13,7 @@ struct ScheduleList: View {
     @State private var isPopoverVisible = false
     
     @State var curArr: [NSDictionary] = []
-    let centerOffset = (winW-16*2)/4
+    let centerOffset = (winW-(16.byScaleWidth())*2)/4
 
     var body: some View {
         
@@ -23,7 +23,7 @@ struct ScheduleList: View {
                 .font(TextStyles.title3Bold)
                 .foregroundColor(Color(UIColor.label))
             Text("Tell Moodji your schedule to know you better.\nDon't worry, an approximate time is enough")
-                .padding(.top, 8)
+                .padding(.top, 8.byScaleWidth())
                 .font(TextStyles.body)
                 .lineSpacing(3)
                 .multilineTextAlignment(.center)
@@ -32,7 +32,7 @@ struct ScheduleList: View {
             Spacer().frame(height: SizeStylesPro().spacingXxl)
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
                 HStack {
-                    HStack(alignment: .center, spacing: SizeStylesPro().padding4, content: {
+                    HStack(alignment: .center, spacing: SizeStylesPro().paddingXxs.byScaleWidth(), content: {
                         Spacer()
                         Image(systemName: "bed.double.fill")
                         Text("SLEEP")
@@ -65,10 +65,10 @@ struct ScheduleList: View {
                     .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
             
-            Spacer().frame(height: SizeStylesPro().spacing16)
+            Spacer().frame(height: SizeStylesPro().spacingM.byScaleWidth())
             
             ScrollView(.vertical, showsIndicators: false, content: {
-                VStack(alignment: .center, spacing: SizeStylesPro().spacing12, content: {
+                VStack(alignment: .center, spacing: SizeStylesPro().spacingS.byScaleWidth(), content: {
                     ForEach(Array(curArr.enumerated()), id: \.element) { index, e in
                         SchedulListCell(dic: e as! [String : Any], dicIdx: index)
                     }
@@ -89,14 +89,14 @@ struct ScheduleList: View {
                         //                            .environmentObject(self.coloState)
                     }
                 })
-                .padding(.top, SizeStylesPro().padding8)
+                .padding(.top, SizeStylesPro().spacingXs.byScaleWidth())
                 .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
             
         }
-        .padding(.leading, SizeStylesPro().spacing16)
-        .padding(.trailing, SizeStylesPro().spacing16)
-        .padding(.top, SizeStylesPro().spacing16)
+        .padding(.leading, SizeStylesPro().spacingM.byScaleWidth())
+        .padding(.trailing, SizeStylesPro().spacingM.byScaleWidth())
+        .padding(.top, SizeStylesPro().spacingM.byScaleWidth())
         .background(Color(UIColor.systemGroupedBackground))
         .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
         .ignoresSafeArea()
@@ -163,7 +163,7 @@ struct SchedulListCell: View {
     }
     
     var body: some View {
-        VStack(alignment:.leading, spacing: SizeStylesPro().padding8) {
+        VStack(alignment:.leading, spacing: SizeStylesPro().spacingXs.byScaleWidth()) {
             Text(weekStrGet(arr: dic["days"] as? [Int]))
                 .font(TextStyles.subHeadlineSemibold)
             HStack {
@@ -183,9 +183,9 @@ struct SchedulListCell: View {
                 }
             }
         }
-        .padding(SizeStylesPro().spacing16)
+        .padding(SizeStylesPro().spacingM.byScaleWidth())
         .background(Color(UIColor.secondarySystemGroupedBackground))
-        .cornerRadius(SizeStylesPro().spacing16)
+        .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
         .environmentObject(coloState)
     }
 }
