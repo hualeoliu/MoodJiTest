@@ -113,14 +113,18 @@ struct ScheduleList: View {
     
     func dataLoadDo() {
         curArr = []
-        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [NSDictionary] {
+        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Data] {
             print("loo 设置 \(t.count)")
             
             t.forEach { dic in
-                if let haq = ScheduleBean.init(by: dic) {
+                do{
+                    let haq = try JSONDecoder().decode(ScheduleBean.self, from: dic)
                     curArr += [haq]
                     print("Key 1: \(haq.days)")
-                }
+                 }catch{
+                     
+                 }
+
             }
         }
     }

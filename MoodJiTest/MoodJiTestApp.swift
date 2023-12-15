@@ -22,6 +22,8 @@ struct MoodJiTestApp: App {
                 Guides(idx: 0)
             }
             
+//            Guides(idx: 0)
+
         }
     }
 }

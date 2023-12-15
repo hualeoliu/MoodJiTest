@@ -60,18 +60,16 @@ struct Guides: View {
     }
     
     func doneDo() {
-        print("okk ")
         __dateSir.dateFormat = "HH:mm"
         let haq = ScheduleBean(days: [5,6], start: __dateSir.date(from: "23:00")!, end: __dateSir.date(from: "07:00")!)
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(haq)
             
-            if let dic = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                print("okk", dic)
-                __UserDefault.setValue([dic], forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
-                __UserDefault.synchronize()
-            }
+            __UserDefault.setValue([data], forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
+            __UserDefault.synchronize()
+            
+            print("okk ")
         } catch {
             print("转换失败: \(error.localizedDescription)")
         }
