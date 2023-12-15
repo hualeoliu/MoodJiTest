@@ -588,7 +588,7 @@
 				DEVELOPMENT_TEAM = W3R22EYM38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,7 +611,7 @@
 				DEVELOPMENT_TEAM = W3R22EYM38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

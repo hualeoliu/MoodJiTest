@@ -31,14 +31,13 @@ public protocol SizeStylesProtocal {
     var spacingS: Double { get }
     var spacingXl: Double { get }
     var spacingXs: Double { get }
-    var spacingXxl: Double { get }
+    var spacingXxl: CGFloat { get }
     var spacingXxs: Double { get }
     var spacingXxxs: Double { get }
     
     var padding4: CGFloat { get }
     var padding8: CGFloat { get }
     var spacing12: CGFloat { get }
-    var spacing16: CGFloat { get }
 }
 
 public class SizeStylesPro: SizeStylesProtocal {
@@ -65,15 +64,28 @@ public class SizeStylesPro: SizeStylesProtocal {
     public let spacingS = 12.0
     public let spacingXl = 24.0
     public let spacingXs = 8.0
-    public let spacingXxl = 32.0
+    public var spacingXxl: CGFloat {//根据机型写死宽度
+        if winW == 393 || winW == 390 {//12 12p
+            return CGFloat(32)//设计图基准屏幕
+        }
+        if winW == 430 || winW == 428 {//12pm
+            return 36
+        }
+        if winW == 414 {//6sp xsm 11pm
+            return 36//未定义
+        }
+        if winW == 375 {//6s x 12mini
+            return 28
+        }
+        return 32
+    }
     public let spacingXxs = 4.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
-
+    
 }
 
 public class SizeStylesProMax: SizeStylesProtocal {
@@ -100,18 +112,16 @@ public class SizeStylesProMax: SizeStylesProtocal {
     public let spacingS = 14.0
     public let spacingXl = 28.0
     public let spacingXs = 10.0
-    public let spacingXxl = 36.0
+    public let spacingXxl:CGFloat = 36.0
     public let spacingXxs = 6.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
 }
 
 public class SizeStylesMini: SizeStylesProtocal {
-    
     public init() {}
     public let name: String = "SizeStylesMini"
     public let cornerRadiusL = 12.0
@@ -135,15 +145,30 @@ public class SizeStylesMini: SizeStylesProtocal {
     public let spacingS = 10.0
     public let spacingXl = 20.0
     public let spacingXs = 6.0
-    public let spacingXxl = 28.0
+    public let spacingXxl:CGFloat = 28.0
     public let spacingXxs = 3.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
 }
+
+extension Int {
+    func byScaleWidth() -> CGFloat {//根据屏幕宽度适配
+        return CGFloat(self)/393*winW
+    }
+    
+//    func bySpecial() -> CGFloat {//特定
+//        return
+//    }
+}
+extension Double {
+    func byScaleWidth() -> CGFloat {//根据屏幕宽度适配
+        return CGFloat(self)/393*winW
+    }
+}
+
 
 public class SizeStylesWatch45: SizeStylesProtocal {
     public init() {}
@@ -169,14 +194,13 @@ public class SizeStylesWatch45: SizeStylesProtocal {
     public let spacingS = 4.0
     public let spacingXl = 12.0
     public let spacingXs = 2.0
-    public let spacingXxl = 16.0
+    public let spacingXxl:CGFloat = 16.0
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
 }
 
 public class SizeStylesWatch49: SizeStylesProtocal {
@@ -203,14 +227,13 @@ public class SizeStylesWatch49: SizeStylesProtocal {
     public let spacingS = 6.0
     public let spacingXl = 16.0
     public let spacingXs = 4.0
-    public let spacingXxl = 20.0
+    public let spacingXxl:CGFloat = 20.0
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
 }
 
 public class SizeStylesWatch41: SizeStylesProtocal {
@@ -237,14 +260,13 @@ public class SizeStylesWatch41: SizeStylesProtocal {
     public let spacingS = 2.0
     public let spacingXl = 8.0
     public let spacingXs = 1.0
-    public let spacingXxl = 12.0
+    public let spacingXxl:CGFloat = 12.0
     public let spacingXxs = 2.0
     public let spacingXxxs = 2.0
     
     public let padding4:CGFloat = 4
     public let padding8:CGFloat = 8
     public let spacing12:CGFloat = 12
-    public let spacing16:CGFloat = 16
 }
 
 

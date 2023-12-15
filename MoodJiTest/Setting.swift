@@ -70,7 +70,8 @@ struct Setting: View {
                         .cornerRadius(SizeStylesPro().spacing16)
                     })
                     .popover(isPresented: $isPopoverVisible) {
-                        ScheduleList().environmentObject(self.coloState)
+                        ScheduleList()
+//                            .environmentObject(self.coloState)
                     }
                     
                 })
@@ -79,6 +80,7 @@ struct Setting: View {
             .background(Color(UIColor.systemGroupedBackground))
             .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
             .navigationTitle("Setting")
+            .environmentObject(coloState)
             .onAppear(perform: {
                 if let t = __UserDefault.value(forKey: mainColorSet) as? Int {
                     print("color 设置 \(t)")

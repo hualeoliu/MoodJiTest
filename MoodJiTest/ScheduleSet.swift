@@ -10,6 +10,7 @@ import SwiftUI
 struct ScheduleSet: View {
     @EnvironmentObject var coloState : MainColorModel
     @Binding var isPresented: Bool
+    @State private var showingAlert = false
     
     @State var arrIdx: Int
     @State var mDic = [String: Any]()
@@ -20,8 +21,8 @@ struct ScheduleSet: View {
     
     @State private var canStart = false
     @State private var canEnd = false
-
-
+    
+    
     func isDaySelected(idx: Int) -> Bool {
         let days = mDic["days"] as? [Int]
         if let t = days {
@@ -60,7 +61,18 @@ struct ScheduleSet: View {
         timeEnd = mDic["end"] as? Date ?? Date()
     }
     
-    func okDo() {
+    func okDo() -> Bool {
+        var days = mDic["days"] as? [Int]
+        if let t = days {
+            if t.count == 0 {
+                print("请至少选择一天")
+                return false
+            }
+        }else{
+            print("请至少选择一天")
+            return false
+        }
+        
         var curArr = [Any]()
         if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Any] {
             print("color 设置 \(t)")
@@ -77,22 +89,32 @@ struct ScheduleSet: View {
         __UserDefault.synchronize()
         
         listBlock?()
+        return true
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .center) {
                 Text("Cancel").font(TextStyles.body)
-                .onTapGesture {
-                    isPresented.toggle()
-                }
+                    .onTapGesture {
+                        isPresented.toggle()
+                    }
                 Spacer()
                 Text("Schedule").font(TextStyles.bodySemibold).foregroundColor(Color(UIColor.label))
                 Spacer()
                 Text("Done").onTapGesture {
-                    isPresented.toggle()
-                    
-                    okDo()
+                    if okDo() {
+                        isPresented.toggle()
+                    }else{
+                        showingAlert.toggle()
+                    }
+                }
+                .alert(isPresented: $showingAlert) { // 3
+                    Alert( // 4
+                        title: Text("Warn"), // 标题
+                        message: Text("请至少选择一天"), // 消息内容
+                        dismissButton: .cancel() // 取消按钮
+                    )
                 }
             }
             .frame(height: 50)
@@ -103,7 +125,7 @@ struct ScheduleSet: View {
                     Image(coloState.timeType == 0 ? "schedule_sleep" : "schedule_work")
                     Text(coloState.timeType == 0 ? "SLEEP" : "WORK").font(TextStyles.headline).foregroundColor(Color(UIColor.label))
                         .padding(.top, SizeStylesPro().padding8)
-
+                    
                 }
                 Spacer()
             }
@@ -113,7 +135,7 @@ struct ScheduleSet: View {
                 .padding(.top, 24)
                 .padding(.bottom, SizeStylesPro().spacing12)
                 .padding(.leading, SizeStylesPro().padding8)
-
+            
             HStack(alignment: .center, spacing: 0) {
                 ForEach(0..<weekStrs.count, id: \.self) { idx in
                     Text(weekStrs[idx]).font(TextStyles.headline).foregroundColor(Color(UIColor.label))
@@ -138,7 +160,7 @@ struct ScheduleSet: View {
                 .padding(.top, 24)
                 .padding(.bottom, SizeStylesPro().spacing12)
                 .padding(.leading, SizeStylesPro().padding8)
-
+            
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text("Start").font(TextStyles.body).foregroundColor(Color(UIColor.label))
@@ -163,7 +185,7 @@ struct ScheduleSet: View {
                         .labelsHidden()
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                 }
-
+                
                 Rectangle().foregroundColor(Color(UIColor.systemFill)).frame(height: 1)
                 
                 HStack {
@@ -201,7 +223,7 @@ struct ScheduleSet: View {
         .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
         .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
         .environmentObject(coloState)
-        .environment(\.locale, .init(identifier: "da"))
+//        .environment(\.locale, .init(identifier: "da"))
         .onAppear(perform: {
             dataLoadDo()
         })

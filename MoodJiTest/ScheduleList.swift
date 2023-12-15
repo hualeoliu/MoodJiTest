@@ -11,13 +11,14 @@ var listBlock: (()->())?
 struct ScheduleList: View {
     @EnvironmentObject var coloState : MainColorModel
     @State private var isPopoverVisible = false
-
-    @State var curArr = []
+    
+    @State var curArr: [NSDictionary] = []
+    let centerOffset = (winW-16*2)/4
 
     var body: some View {
-            
+        
         VStack(alignment: .center, spacing: 0) {
-            Spacer().frame(height: 24)
+            Spacer().frame(height: 24.byScaleWidth())
             Text("Set your sleep schedule")
                 .font(TextStyles.title3Bold)
                 .foregroundColor(Color(UIColor.label))
@@ -28,7 +29,7 @@ struct ScheduleList: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(UIColor.tertiaryLabel))
             
-            Spacer().frame(height: 30)
+            Spacer().frame(height: SizeStylesPro().spacingXxl)
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
                 HStack {
                     HStack(alignment: .center, spacing: SizeStylesPro().padding4, content: {
@@ -57,30 +58,19 @@ struct ScheduleList: View {
                         dataLoadDo()
                     }
                 }
-                .frame(height: 50)
-
+                .frame(height: 50)//应该固定高
+                
                 Image(uiImage: UIImage(named: "schedule_taped")!.withRenderingMode(.alwaysTemplate))
-                    .offset(x: coloState.timeType == 0 ? -90 : 90, y: 0).animation(.easeIn)
+                    .offset(x: coloState.timeType == 0 ? -centerOffset : centerOffset, y: 0).animation(.easeIn)
                     .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
-
-            Spacer().frame(height: SizeStylesPro().spacing16)
             
-//            List {
-//                ForEach(0..<curArr.count, id: \.self) { idx in
-//                    SchedulListCell(dic: curArr[idx] as! [String : Any])
-//                }
-//                .onDelete(perform: { indexSet in
-//                    curArr.remove(atOffsets: indexSet)
-//                    __UserDefault.setValue(curArr, forKey: curTapIdx == 0 ? sleepTimeArr : workTimeArr)
-//                    __UserDefault.synchronize()
-//                })
-//            }
+            Spacer().frame(height: SizeStylesPro().spacing16)
             
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: SizeStylesPro().spacing12, content: {
-                    ForEach(0..<curArr.count, id: \.self) { idx in
-                        SchedulListCell(coloState: coloState, dic: curArr[idx] as! [String : Any], dicIdx: idx)
+                    ForEach(Array(curArr.enumerated()), id: \.element) { index, e in
+                        SchedulListCell(dic: e as! [String : Any], dicIdx: index)
                     }
                     
                     HStack(alignment: .center, spacing: 4, content: {
@@ -95,13 +85,14 @@ struct ScheduleList: View {
                         isPopoverVisible.toggle()
                     }
                     .popover(isPresented: $isPopoverVisible) {
-                        ScheduleSet(isPresented: $isPopoverVisible, arrIdx: curArr.count).environmentObject(self.coloState)
+                        ScheduleSet(isPresented: $isPopoverVisible, arrIdx: curArr.count)
+                        //                            .environmentObject(self.coloState)
                     }
                 })
                 .padding(.top, SizeStylesPro().padding8)
                 .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
-
+            
         }
         .padding(.leading, SizeStylesPro().spacing16)
         .padding(.trailing, SizeStylesPro().spacing16)
@@ -109,27 +100,22 @@ struct ScheduleList: View {
         .background(Color(UIColor.systemGroupedBackground))
         .preferredColorScheme(coloState.colorOption == 0 ? .none : (coloState.colorOption == 1 ? .light : .dark))
         .ignoresSafeArea()
+        .environmentObject(coloState)
         .onAppear(perform: {
-            __dateSir.dateFormat = "hh:mm"
-            __dateSir.locale = Locale(identifier: "da")
+            __dateSir.dateFormat = "HH:mm"
+//            __dateSir.locale = Locale(identifier: "da")
             
+//            __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
             dataLoadDo()
-            listBlock = {
-                print("listbloc")
-                uiDo {
-                    dataLoadDo()
-                }
+            listBlock = {//编辑保存后刷新
+                dataLoadDo()
             }
         })
     }
     
-    func dataAddDo() {
-        
-    }
-    
     func dataLoadDo() {
-        curArr.removeAll()
-        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Any] {
+        curArr = []
+        if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [NSDictionary] {
             print("color 设置 \(t.count)")
             curArr = t
         }
@@ -139,19 +125,23 @@ struct ScheduleList: View {
 
 
 struct SchedulListCell: View {
-    @State var coloState : MainColorModel
-
+    @EnvironmentObject var coloState : MainColorModel
+    
     @State private var isPopoverVisible = false
     @State var dic : [String : Any]
     @State var dicIdx : Int
     let weekStrs = [0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sta", 6: "Sun"]
     
-    func weekStrGet(arr: [Int]) -> String {
+    func weekStrGet(arr: [Int]?) -> String {
+        let arr = arr ?? []
         if arr == [5, 6] || arr == [6, 5] {
             return "Weekend"
         }
         if arr.count == 5 && !arr.contains(5) && !arr.contains(6) {
             return "Weekdays"
+        }
+        if arr.count == 7 {
+            return "Everyday"
         }
         if arr.count == 1 {
             return weekStrs[arr.first!]!
@@ -172,10 +162,9 @@ struct SchedulListCell: View {
         return "Unkown"
     }
     
-    
     var body: some View {
         VStack(alignment:.leading, spacing: SizeStylesPro().padding8) {
-            Text(weekStrGet(arr: dic["days"] as! [Int]))
+            Text(weekStrGet(arr: dic["days"] as? [Int]))
                 .font(TextStyles.subHeadlineSemibold)
             HStack {
                 Text("\(__dateSir.string(from: dic["start"] as! Date)) - \(__dateSir.string(from: dic["end"] as! Date)) ")
@@ -189,12 +178,14 @@ struct SchedulListCell: View {
                         .font(TextStyles.subHeadlineSemibold)
                 })
                 .popover(isPresented: $isPopoverVisible) {
-                    ScheduleSet(isPresented: $isPopoverVisible, arrIdx: dicIdx).environmentObject(self.coloState)
+                    ScheduleSet(isPresented: $isPopoverVisible, arrIdx: dicIdx)
+                    //                        .environmentObject(self.coloState)
                 }
             }
         }
         .padding(SizeStylesPro().spacing16)
         .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(SizeStylesPro().spacing16)
+        .environmentObject(coloState)
     }
 }
