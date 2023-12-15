@@ -12,11 +12,10 @@ struct ScheduleList: View {
     @EnvironmentObject var coloState : MainColorModel
     @State private var isPopoverVisible = false
     
-    @State var curArr: [NSDictionary] = []
+    @State var curArr = [ScheduleBean]()
     let centerOffset = (winW-(16.byScaleWidth())*2)/4
-
+    
     var body: some View {
-        
         VStack(alignment: .center, spacing: 0) {
             Spacer().frame(height: 24.byScaleWidth())
             Text("Set your sleep schedule")
@@ -70,7 +69,7 @@ struct ScheduleList: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: SizeStylesPro().spacingS.byScaleWidth(), content: {
                     ForEach(Array(curArr.enumerated()), id: \.element) { index, e in
-                        SchedulListCell(dic: e as! [String : Any], dicIdx: index)
+                        SchedulListCell(dic: e, dicIdx: index)
                     }
                     
                     HStack(alignment: .center, spacing: 4, content: {
@@ -86,7 +85,6 @@ struct ScheduleList: View {
                     }
                     .popover(isPresented: $isPopoverVisible) {
                         ScheduleSet(isPresented: $isPopoverVisible, arrIdx: curArr.count)
-                        //                            .environmentObject(self.coloState)
                     }
                 })
                 .padding(.top, SizeStylesPro().spacingXs.byScaleWidth())
@@ -103,9 +101,9 @@ struct ScheduleList: View {
         .environmentObject(coloState)
         .onAppear(perform: {
             __dateSir.dateFormat = "HH:mm"
-//            __dateSir.locale = Locale(identifier: "da")
+            //            __dateSir.locale = Locale(identifier: "da")
             
-//            __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
+            //            __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
             dataLoadDo()
             listBlock = {//编辑保存后刷新
                 dataLoadDo()
@@ -116,8 +114,14 @@ struct ScheduleList: View {
     func dataLoadDo() {
         curArr = []
         if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [NSDictionary] {
-            print("color 设置 \(t.count)")
-            curArr = t
+            print("loo 设置 \(t.count)")
+            
+            t.forEach { dic in
+                if let haq = ScheduleBean.init(by: dic) {
+                    curArr += [haq]
+                    print("Key 1: \(haq.days)")
+                }
+            }
         }
     }
     
@@ -128,7 +132,7 @@ struct SchedulListCell: View {
     @EnvironmentObject var coloState : MainColorModel
     
     @State private var isPopoverVisible = false
-    @State var dic : [String : Any]
+    @State var dic : ScheduleBean
     @State var dicIdx : Int
     let weekStrs = [0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sta", 6: "Sun"]
     
@@ -164,10 +168,10 @@ struct SchedulListCell: View {
     
     var body: some View {
         VStack(alignment:.leading, spacing: SizeStylesPro().spacingXs.byScaleWidth()) {
-            Text(weekStrGet(arr: dic["days"] as? [Int]))
+            Text(weekStrGet(arr: dic.days))
                 .font(TextStyles.subHeadlineSemibold)
             HStack {
-                Text("\(__dateSir.string(from: dic["start"] as! Date)) - \(__dateSir.string(from: dic["end"] as! Date)) ")
+                Text("\(__dateSir.string(from: dic.start ?? Date())) - \(__dateSir.string(from: dic.end ?? Date())) ")
                     .font(TextStyles.title3Bold)
                     .foregroundColor(Color(UIColor.label))
                 Spacer()
@@ -179,7 +183,6 @@ struct SchedulListCell: View {
                 })
                 .popover(isPresented: $isPopoverVisible) {
                     ScheduleSet(isPresented: $isPopoverVisible, arrIdx: dicIdx)
-                    //                        .environmentObject(self.coloState)
                 }
             }
         }
@@ -189,3 +192,4 @@ struct SchedulListCell: View {
         .environmentObject(coloState)
     }
 }
+

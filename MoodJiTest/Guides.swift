@@ -24,15 +24,11 @@ struct Guides: View {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .foregroundColor(Color.pink.opacity(0.01))
-                        .alignmentGuide(.center) { _ in
-                            geometry.size.height * 0.5 // 调整顶部位置  不起作用??
-                        }
-                        .alignmentGuide(.center) { _ in
-                            geometry.size.width * 0.3 // 调整左侧位置
-                        }
                         .onTapGesture {
                             showNewView.toggle()
                             idx = 3
+                            
+                            doneDo()
                         }
                 }
                 
@@ -42,9 +38,11 @@ struct Guides: View {
                         .foregroundColor(Color.pink.opacity(0.01))
                         .onTapGesture {
                             showNewView.toggle()
+                            if idx == 3 {
+                                doneDo()
+                            }
                         }
                 }
-                
             }
             
             if showNewView {
@@ -59,6 +57,25 @@ struct Guides: View {
         }
         
         .edgesIgnoringSafeArea(.all)
+    }
+    
+    func doneDo() {
+        print("okk ")
+        __dateSir.dateFormat = "HH:mm"
+        let haq = ScheduleBean(days: [5,6], start: __dateSir.date(from: "23:00")!, end: __dateSir.date(from: "07:00")!)
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(haq)
+            
+            if let dic = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                print("okk", dic)
+                __UserDefault.setValue([dic], forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
+                __UserDefault.synchronize()
+            }
+        } catch {
+            print("转换失败: \(error.localizedDescription)")
+        }
+
     }
 }
 

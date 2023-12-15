@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A144C322B2B11E300496646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A144C312B2B11E300496646 /* LaunchScreen.storyboard */; };
+		3A2542D12B2C65F100061583 /* ScheduleBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2542D02B2C65F100061583 /* ScheduleBean.swift */; };
 		3A401A332B295ACE00914205 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A322B295ACE00914205 /* TextStyles.swift */; };
 		3A401A352B2963E000914205 /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A342B2963E000914205 /* ScheduleList.swift */; };
 		3A401A372B29C86900914205 /* GlobleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A401A362B29C86900914205 /* GlobleTools.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		3A144C312B2B11E300496646 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A2542D02B2C65F100061583 /* ScheduleBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBean.swift; sourceTree = "<group>"; };
 		3A401A322B295ACE00914205 /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		3A401A342B2963E000914205 /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		3A401A362B29C86900914205 /* GlobleTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleTools.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				3A401A342B2963E000914205 /* ScheduleList.swift */,
 				3A401A382B29D70000914205 /* ScheduleSet.swift */,
 				3A962DF52B2B0332009E05E6 /* Guides.swift */,
+				3A2542D02B2C65F100061583 /* ScheduleBean.swift */,
 				3A8885072B2881E300C49B69 /* ColorStyles.swift */,
 				3A8885082B2881E300C49B69 /* SizeStyles.swift */,
 				3A401A322B295ACE00914205 /* TextStyles.swift */,
@@ -341,6 +344,7 @@
 				3A8884CF2B287C7200C49B69 /* ContentView.swift in Sources */,
 				3A88850C2B28910200C49B69 /* Setting.swift in Sources */,
 				3A8885092B2881E300C49B69 /* ColorStyles.swift in Sources */,
+				3A2542D12B2C65F100061583 /* ScheduleBean.swift in Sources */,
 				3A88850A2B2881E300C49B69 /* SizeStyles.swift in Sources */,
 				3A8884CD2B287C7200C49B69 /* MoodJiTestApp.swift in Sources */,
 				3A401A392B29D70000914205 /* ScheduleSet.swift in Sources */,
