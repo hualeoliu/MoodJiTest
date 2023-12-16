@@ -138,6 +138,7 @@ struct SchedulListCell: View {
     @State private var isPopoverVisible = false
     @State var dic : ScheduleBean
     @State var dicIdx : Int
+    @State var isGuide : Bool = false
     let weekStrs = [0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sta", 6: "Sun"]
     
     func weekStrGet(arr: [Int]?) -> String {
@@ -191,8 +192,9 @@ struct SchedulListCell: View {
             }
         }
         .padding(SizeStylesPro().spacingM.byScaleWidth())
-        .background(Color(UIColor.secondarySystemGroupedBackground))
+        .background(isGuide ? Color.clear : Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
+        .overlay(RoundedRectangle(cornerRadius: SizeStylesPro().spacingM.byScaleWidth()).stroke(Color(isGuide ? UIColor.systemFill : .clear), lineWidth: 1))
         .environmentObject(coloState)
     }
 }

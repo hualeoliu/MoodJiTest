@@ -82,11 +82,10 @@ struct Setting: View {
             .navigationTitle("Setting")
             .environmentObject(coloState)
             .onAppear(perform: {
+                coloState.timeType = 0
                 if let t = __UserDefault.value(forKey: mainColorSet) as? Int {
-                    print("color 设置 \(t)")
                     coloState.colorOption = t
                 }else{
-                    print("color 未设置")
                     __UserDefault.setValue(0, forKey: mainColorSet)
                 }
             })

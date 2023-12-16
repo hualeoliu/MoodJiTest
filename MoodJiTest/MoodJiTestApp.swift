@@ -19,10 +19,10 @@ struct MoodJiTestApp: App {
                 ContentView()
                     .environmentObject(coloState)
             }else{
-                Guides(idx: 0)
+                Guides()
             }
             
-//            Guides(idx: 0)
+//            Guides()
 
         }
     }
