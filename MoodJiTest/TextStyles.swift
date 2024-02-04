@@ -2,7 +2,7 @@
 //  TextStyles.swift
 //  Flowzland
 //
-//  Created by 游晶 on 2023/09/04.
+//  Created by 老游 on 2023/09/04.
 //
 
 import Foundation
@@ -31,4 +31,26 @@ public enum TextStyles {
     public static let caption1 = Font.system(.caption, design: .rounded)//12
     public static let caption2 = Font.system(.caption2, design: .rounded)//11
     public static let smallNote = Font.system(size: 12, design: .rounded)
+}
+
+
+enum SFSymbol: String {
+    case arrowUpRight = "arrow.up.right"
+    case chevronForward = "chevron.forward"
+    case heartTextSquareFill = "heart.text.square.fill"
+    case gearshapeFill = "gearshape.fill"
+    case applewatchWatchface = "applewatch.watchface"
+    case questionmarkCircleFill = "questionmark.circle.fill"
+    case paperplane
+    case moonphaseWaningGibbousInverse = "moonphase.waning.gibbous.inverse"
+    case textformat
+    case infoCircleFill = "info.circle.fill"
+    case checkmarkCircleFill = "checkmark.circle.fill"
+    case ellipsisBubbleFill = "ellipsis.bubble.fill"
+    case exclamationmarkCircle = "exclamationmark.circle"
+    case hourglass
+    case bedDoubleFill = "bed.double.fill"
+    case paintPaletteFill = "paintpalette.fill"
+    case calendar
+    case calendarClock = "calendar.badge.clock"
 }

@@ -5,16 +5,23 @@
 //  Created by ZZ on 2023/12/13.
 //
 
+import AVFoundation
+import AVKit
 import SwiftUI
+import UIKit
 
-var listBlock: (()->())?
+let spath = Bundle.main.path(forResource: "s", ofType: "mp4")!
+let path = Bundle.main.path(forResource: "bsz", ofType: "mp4")!
+class OneVC: UIViewController {}
+
+var listBlock: (() -> Void)?
 struct ScheduleList: View {
-    @EnvironmentObject var coloState : MainColorModel
+    @EnvironmentObject var coloState: MainColorModel
     @State private var isPopoverVisible = false
-    
+
     @State var curArr = [ScheduleBean]()
-    let centerOffset = (winW-(16.byScaleWidth())*2)/4
-    
+    let centerOffset = (winW - (16.byScaleWidth()) * 2) / 4
+
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             Spacer().frame(height: 24.byScaleWidth())
@@ -27,7 +34,7 @@ struct ScheduleList: View {
                 .lineSpacing(3)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(UIColor.tertiaryLabel))
-            
+
             Spacer().frame(height: SizeStylesPro().spacingXxl)
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
                 HStack {
@@ -43,7 +50,7 @@ struct ScheduleList: View {
                         coloState.timeType = 0
                         dataLoadDo()
                     }
-                    
+
                     HStack {
                         Spacer()
                         Image(systemName: "building.2.fill")
@@ -57,21 +64,21 @@ struct ScheduleList: View {
                         dataLoadDo()
                     }
                 }
-                .frame(height: 50)//应该固定高
-                
+                .frame(height: 50) // 应该固定高
+
                 Image(uiImage: UIImage(named: "schedule_taped")!.withRenderingMode(.alwaysTemplate))
                     .offset(x: coloState.timeType == 0 ? -centerOffset : centerOffset, y: 0).animation(.easeIn)
                     .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
-            
+
             Spacer().frame(height: SizeStylesPro().spacingM.byScaleWidth())
-            
+
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: SizeStylesPro().spacingS.byScaleWidth(), content: {
                     ForEach(Array(curArr.enumerated()), id: \.element) { index, e in
                         SchedulListCell(dic: e, dicIdx: index)
                     }
-                    
+
                     HStack(alignment: .center, spacing: 4, content: {
                         Spacer()
                         Image(systemName: "plus")
@@ -90,7 +97,6 @@ struct ScheduleList: View {
                 .padding(.top, SizeStylesPro().spacingXs.byScaleWidth())
                 .foregroundColor(coloState.timeType == 0 ? ColorStylesDark().accentSleep : ColorStylesDark().accentScreenTime)
             })
-            
         }
         .padding(.leading, SizeStylesPro().spacingM.byScaleWidth())
         .padding(.trailing, SizeStylesPro().spacingM.byScaleWidth())
@@ -101,46 +107,40 @@ struct ScheduleList: View {
         .environmentObject(coloState)
         .onAppear(perform: {
             __dateSir.dateFormat = "HH:mm"
-            //            __dateSir.locale = Locale(identifier: "da")
-            
-            //            __UserDefault.setValue(curArr, forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr)
+
             dataLoadDo()
-            listBlock = {//编辑保存后刷新
+            listBlock = { // 编辑保存后刷新
                 dataLoadDo()
             }
+
         })
     }
-    
+
     func dataLoadDo() {
         curArr = []
         if let t = __UserDefault.value(forKey: coloState.timeType == 0 ? sleepTimeArr : workTimeArr) as? [Data] {
             print("loo 设置 \(t.count)")
-            
+
             t.forEach { dic in
-                do{
+                do {
                     let haq = try JSONDecoder().decode(ScheduleBean.self, from: dic)
                     curArr += [haq]
                     print("Key 1: \(haq.days)")
-                 }catch{
-                     
-                 }
-
+                } catch {}
             }
         }
     }
-    
 }
 
-
 struct SchedulListCell: View {
-    @EnvironmentObject var coloState : MainColorModel
-    
+    @EnvironmentObject var coloState: MainColorModel
+
     @State private var isPopoverVisible = false
-    @State var dic : ScheduleBean
-    @State var dicIdx : Int
-    @State var isGuide : Bool = false
+    @State var dic: ScheduleBean
+    @State var dicIdx: Int
+    @State var isGuide: Bool = false
     let weekStrs = [0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sta", 6: "Sun"]
-    
+
     func weekStrGet(arr: [Int]?) -> String {
         let arr = arr ?? []
         if arr == [5, 6] || arr == [6, 5] {
@@ -157,12 +157,12 @@ struct SchedulListCell: View {
         }
         if arr.count > 1 {
             var str = ""
-            for idx in 0..<arr.count {
-                if idx == arr.count-1 {
+            for idx in 0 ..< arr.count {
+                if idx == arr.count - 1 {
                     str += "\(weekStrs[arr[idx]]!)"
-                }else if idx == arr.count-2 {
+                } else if idx == arr.count - 2 {
                     str += "\(weekStrs[arr[idx]]!) and "
-                }else{
+                } else {
                     str += "\(weekStrs[arr[idx]]!), "
                 }
             }
@@ -170,9 +170,9 @@ struct SchedulListCell: View {
         }
         return "Unkown"
     }
-    
+
     var body: some View {
-        VStack(alignment:.leading, spacing: SizeStylesPro().spacingXs.byScaleWidth()) {
+        VStack(alignment: .leading, spacing: SizeStylesPro().spacingXs.byScaleWidth()) {
             Text(weekStrGet(arr: dic.days))
                 .font(TextStyles.subHeadlineSemibold)
             HStack {
@@ -198,4 +198,3 @@ struct SchedulListCell: View {
         .environmentObject(coloState)
     }
 }
-

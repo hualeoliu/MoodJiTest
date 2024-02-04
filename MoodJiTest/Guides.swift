@@ -125,7 +125,7 @@ struct Guides: View {
             }
             
             if showNewView {
-                ContentView()
+                Content0View()
                     .environmentObject(coloState)
             }
         }

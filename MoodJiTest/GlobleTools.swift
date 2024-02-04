@@ -18,10 +18,6 @@ let sleepTimeArr = "sleepTimeArr"
 let workTimeArr = "workTimeArr"
 let firstOpen = "firstOpen"
 
-var winBounds = UIScreen.main.bounds
-var winSize = winBounds.size
-var winW  = winSize.width
-var winH = winSize.height
 var winmin: CGFloat {
     min(winW, winH)
 }
@@ -44,3 +40,5 @@ func uiAfterDo(_ afterTime: Double, _ doSome: @escaping (()->())) {
 func afterDo(_ afterTime: Double, _ doSome: @escaping (()->())) {
     DispatchQueue.global().asyncAfter(deadline: .now() + afterTime, execute: doSome)
 }
+
+

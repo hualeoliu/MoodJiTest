@@ -16,7 +16,7 @@ struct MoodJiTestApp: App {
         WindowGroup {
             
             if let t = __UserDefault.value(forKey: firstOpen) {
-                ContentView()
+                Content0View()
                     .environmentObject(coloState)
             }else{
                 Guides()
