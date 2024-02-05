@@ -79,8 +79,7 @@ struct Setting: View {
                             .cornerRadius(SizeStylesPro().spacingM.byScaleWidth())
                         })
                         .popover(isPresented: $isPopoverVisible) {
-                            ScheduleList()
-                            //                            .environmentObject(self.coloState)
+                            TimelinesView()
                         }
 
                         GeometryReader { geometry in

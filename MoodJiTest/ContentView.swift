@@ -7,124 +7,71 @@
 
 import SwiftUI
 
-enum Tab: String, CaseIterable {
-    case heart = "heart.text.square.fill"
-    case chart = "chart.bar.fill"
-    case paint = "paintpalette.fill"
-    case gear = "gearshape.fill"
+enum IntroViewType: Int, CaseIterable {
+    case kAgreement
+//    case kWatchStatus
+//    case kAutoSync
+//    case kStatusType
+    case kHealthPermission
+//    case kScreenPermission
+    case kSetSleepSchedule
+//    case kAddWatctface
+    case kHome
 }
 
-struct AnimatedTab: Identifiable {
-    var id: UUID = .init()
-    var tab: Tab
-    var isAnimating: Bool?
+private func calcInitIntroView() -> IntroViewType {
+//    let agreement = UserDefaults.standard.object(forKey: GlobalSettings.agreementKey) as? Bool ?? false
+//    let finishIntro = UserDefaults.standard.object(forKey: GlobalSettings.finishIntroKey) as? Bool ?? false
+
+//    if !agreement {
+//        return IntroViewType.kAgreement
+//    }
+//
+//    if !finishIntro {
+//        return IntroViewType.kWatchStatus
+//    }
+
+    return IntroViewType.kHome
 }
 
-struct Content0View: View {
-    @Environment(\.colorScheme) var curMode
-    
-    @State private var aDate: Date = .now
-    
-    @State private var activeTab: Tab = .heart
-    @State private var allTabs: [AnimatedTab] = Tab.allCases.compactMap { tab -> AnimatedTab? in
-        return .init(tab: tab)
-    }
-    
-    @ViewBuilder
-    func CustomTab() -> some View {
-        HStack(spacing: 0) {
-            ForEach($allTabs) { $animatedTab in
-                let tab = animatedTab.tab
-                
-                VStack(spacing: 4) {
-                    if #available(iOS 17.0, *) {
-                        Image(systemName: tab.rawValue)
-                            .font(.title2)
-                            .symbolEffect(.bounce.up.byLayer, value: animatedTab.isAnimating)
-                    } else {
-                        Image(systemName: tab.rawValue)
-                            .font(.title2)
-                    }
+struct ContentView: View {
+    @State private var introNavigationPath: [IntroViewType] = []
 
-                }
-                .frame(maxWidth: .infinity)
-                .foregroundColor(activeTab == tab ? Color.primary : Color.gray.opacity(0.8))
-                .padding(.top, 5)
-                .padding(.bottom, 10)
-                .contentShape(.rect)
-                .onTapGesture {
-                    if #available(iOS 17.0, *) {
-                        withAnimation(.bouncy, completionCriteria: .logicallyComplete, {
-                            activeTab = tab
-                            animatedTab.isAnimating = true
-                        }) {
-                            var trans = Transaction()
-                            trans.disablesAnimations = true
-                            withTransaction(trans) {
-                                animatedTab.isAnimating = nil
-                            }
-                        }
-                    } else {
-                        activeTab = tab
+    private var initPage = calcInitIntroView()
 
-                    }
-
-                }
-            }
-        }
-    }
-    
     var body: some View {
-        
-        VStack {
-            TabView(selection: $activeTab) {
-                ConfettiView()
-                    .frame(width: 300, height: 100)
-                .setupTab(.heart)
-                
-                Mp4View(url: URL(string: testurl)!)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .setupTab(.chart)
-
-                TimePicker(resultDate: $aDate)
-                .setupTab(.paint)
-                
-                Setting()
-                .setupTab(.gear)
+        Group {
+            // home view中包含tab view，嵌入在一个navigation stack中是不被推荐的
+            if initPage == .kHome || introNavigationPath.last == IntroViewType.kHome {
+                MainView()
+            } else {
+                NavigationStack(path: $introNavigationPath) {
+                    createPageView(initPage)
+                        .navigationDestination(for: IntroViewType.self) { t in
+                            createPageView(t)
+                        }
+                }
             }
-            .overlay(alignment: .bottom) {
-                Divider()
-            }
-            
-            CustomTab()
         }
-        
-        .accentColor(curMode == .dark ? ColorStylesDark().tabitemSelected : ColorStylesLight().tabitemSelected)
-        .onAppear(perform: {
-            __UserDefault.setValue(1, forKey: firstOpen)
-        })
-        
+        .preferredColorScheme(.dark)
     }
-}
 
-extension View {
     @ViewBuilder
-    func setupTab(_ tab: Tab) -> some View {
-        if #available(iOS 16.0, *) {
-            self
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .tag(tab)
-                .toolbar(.hidden, for: .tabBar)
-        } else {
-            self
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .tag(tab)
+    private func createPageView(_ pageType: IntroViewType) -> some View {
+        Group {
+            switch pageType {
+                case .kAgreement:
+                    AggrementView(path: $introNavigationPath)
+                        .navigationBarHidden(true)
+                case .kHealthPermission:
+                    HealthReq(path: $introNavigationPath)
+                        .navigationBarHidden(true)
+                case .kSetSleepSchedule:
+                    TimelineIntroduce(path: $introNavigationPath)
+                        .navigationBarHidden(true)
+                case .kHome:
+                    MainView()
+            }
         }
-        
     }
-}
-
-
-var windowWidth: CGFloat {
-    UIScreen.main.bounds.width
 }

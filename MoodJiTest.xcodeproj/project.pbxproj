@@ -3,13 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A144C322B2B11E300496646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A144C312B2B11E300496646 /* LaunchScreen.storyboard */; };
 		3A277FCA2B6F37610006D76B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FC92B6F37610006D76B /* SnapKit */; };
 		3A277FCC2B6F37610006D76B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FCB2B6F37610006D76B /* SnapKit-Dynamic */; };
+		3A277FCF2B6F3A470006D76B /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */; };
+		3A277FD92B6F3ACA0006D76B /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD12B6F3ACA0006D76B /* TimePicker.swift */; };
+		3A277FDA2B6F3ACA0006D76B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD22B6F3ACA0006D76B /* Timeline.swift */; };
+		3A277FDB2B6F3ACA0006D76B /* TimelineEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */; };
+		3A277FDC2B6F3ACA0006D76B /* TimelineIntroduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD42B6F3ACA0006D76B /* TimelineIntroduce.swift */; };
+		3A277FDD2B6F3ACA0006D76B /* TimelinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD52B6F3ACA0006D76B /* TimelinesView.swift */; };
+		3A277FDE2B6F3ACA0006D76B /* TimelinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD62B6F3ACA0006D76B /* TimelinesCell.swift */; };
+		3A277FDF2B6F3ACA0006D76B /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD72B6F3ACA0006D76B /* TimeCell.swift */; };
+		3A277FE02B6F3ACA0006D76B /* TimeColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD82B6F3ACA0006D76B /* TimeColorView.swift */; };
+		3A277FE92B6F3BC90006D76B /* fsz.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE32B6F3BC80006D76B /* fsz.json */; };
+		3A277FEA2B6F3BC90006D76B /* fsz.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE32B6F3BC80006D76B /* fsz.json */; };
+		3A277FEB2B6F3BC90006D76B /* fsz.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE32B6F3BC80006D76B /* fsz.json */; };
+		3A277FEC2B6F3BC90006D76B /* LottView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE42B6F3BC80006D76B /* LottView.swift */; };
+		3A277FED2B6F3BC90006D76B /* LottView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE42B6F3BC80006D76B /* LottView.swift */; };
+		3A277FEE2B6F3BC90006D76B /* fsv.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE52B6F3BC80006D76B /* fsv.json */; };
+		3A277FEF2B6F3BC90006D76B /* fsv.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE52B6F3BC80006D76B /* fsv.json */; };
+		3A277FF02B6F3BC90006D76B /* fsv.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE52B6F3BC80006D76B /* fsv.json */; };
+		3A277FF12B6F3BC90006D76B /* fsc.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE62B6F3BC80006D76B /* fsc.json */; };
+		3A277FF22B6F3BC90006D76B /* fsc.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE62B6F3BC80006D76B /* fsc.json */; };
+		3A277FF32B6F3BC90006D76B /* fsc.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE62B6F3BC80006D76B /* fsc.json */; };
+		3A277FF42B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
+		3A277FF52B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
+		3A277FF62B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
+		3A277FF72B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
+		3A277FF82B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
+		3A277FFB2B6F3C460006D76B /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */; };
+		3A8107B92B6F3D6B003CDC3D /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */; };
+		3A8107BC2B6F3F19003CDC3D /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BA2B6F3F19003CDC3D /* FlexibleView.swift */; };
+		3A8107BD2B6F3F19003CDC3D /* MCGCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */; };
+		3A8107BF2B709351003CDC3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BE2B709351003CDC3D /* MainView.swift */; };
+		3A8107C12B709423003CDC3D /* AggrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107C02B709423003CDC3D /* AggrementView.swift */; };
+		3A8107C32B7094E6003CDC3D /* HealthReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107C22B7094E6003CDC3D /* HealthReq.swift */; };
+		3A8107C52B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */; };
+		3A8107C82B7095BA003CDC3D /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */; };
+		3A8107CB2B709B11003CDC3D /* ShiningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107CA2B709B11003CDC3D /* ShiningView.swift */; };
+		3A8107CC2B709D84003CDC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107CE2B709D84003CDC3D /* LaunchScreen.storyboard */; };
+		3A8107D12B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
+		3A8107D22B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
+		3A8107D32B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
 		3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D02B287C7300C49B69 /* Assets.xcassets */; };
 		3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */; };
 		3A8884D92B287C7300C49B69 /* MoodJiTest WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -25,18 +63,13 @@
 		3AA76D1A2B6F352000C0B98C /* SizeStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76CFE2B6F351F00C0B98C /* SizeStyles.swift */; };
 		3AA76D1B2B6F352000C0B98C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D002B6F351F00C0B98C /* Tab.swift */; };
 		3AA76D1C2B6F352000C0B98C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D012B6F351F00C0B98C /* ContentView.swift */; };
-		3AA76D1D2B6F352000C0B98C /* Guides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D022B6F351F00C0B98C /* Guides.swift */; };
 		3AA76D1E2B6F352000C0B98C /* MoodJiTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D032B6F351F00C0B98C /* MoodJiTestApp.swift */; };
 		3AA76D1F2B6F352000C0B98C /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D102B6F351F00C0B98C /* TextStyles.swift */; };
 		3AA76D202B6F352000C0B98C /* ColorStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D112B6F351F00C0B98C /* ColorStyles.swift */; };
 		3AA76D212B6F352000C0B98C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D122B6F351F00C0B98C /* Setting.swift */; };
 		3AA76D222B6F352000C0B98C /* DCMp4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D132B6F351F00C0B98C /* DCMp4.swift */; };
-		3AA76D232B6F352000C0B98C /* ScheduleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D142B6F351F00C0B98C /* ScheduleSet.swift */; };
 		3AA76D242B6F352000C0B98C /* RibbonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D152B6F351F00C0B98C /* RibbonView.swift */; };
-		3AA76D252B6F352000C0B98C /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D162B6F352000C0B98C /* TimePicker.swift */; };
-		3AA76D262B6F352000C0B98C /* ScheduleBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D172B6F352000C0B98C /* ScheduleBean.swift */; };
 		3AA76D272B6F352000C0B98C /* GlobleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D182B6F352000C0B98C /* GlobleTools.swift */; };
-		3AA76D282B6F352000C0B98C /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D192B6F352000C0B98C /* ScheduleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +90,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3A8107C92B7095BA003CDC3D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A8884FF2B287C7400C49B69 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,7 +125,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3A144C312B2B11E300496646 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A277FD12B6F3ACA0006D76B /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		3A277FD22B6F3ACA0006D76B /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEditView.swift; sourceTree = "<group>"; };
+		3A277FD42B6F3ACA0006D76B /* TimelineIntroduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineIntroduce.swift; sourceTree = "<group>"; };
+		3A277FD52B6F3ACA0006D76B /* TimelinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinesView.swift; sourceTree = "<group>"; };
+		3A277FD62B6F3ACA0006D76B /* TimelinesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinesCell.swift; sourceTree = "<group>"; };
+		3A277FD72B6F3ACA0006D76B /* TimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		3A277FD82B6F3ACA0006D76B /* TimeColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeColorView.swift; sourceTree = "<group>"; };
+		3A277FE22B6F3BC80006D76B /* MoodJiTest WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoodJiTest WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A277FE32B6F3BC80006D76B /* fsz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsz.json; sourceTree = "<group>"; };
+		3A277FE42B6F3BC80006D76B /* LottView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottView.swift; sourceTree = "<group>"; };
+		3A277FE52B6F3BC80006D76B /* fsv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsv.json; sourceTree = "<group>"; };
+		3A277FE62B6F3BC80006D76B /* fsc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsc.json; sourceTree = "<group>"; };
+		3A277FE72B6F3BC80006D76B /* fsx.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsx.json; sourceTree = "<group>"; };
+		3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		3A8107BA2B6F3F19003CDC3D /* FlexibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
+		3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCGCDTimer.swift; sourceTree = "<group>"; };
+		3A8107BE2B709351003CDC3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3A8107C02B709423003CDC3D /* AggrementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrementView.swift; sourceTree = "<group>"; };
+		3A8107C22B7094E6003CDC3D /* HealthReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthReq.swift; sourceTree = "<group>"; };
+		3A8107CA2B709B11003CDC3D /* ShiningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiningView.swift; sourceTree = "<group>"; };
+		3A8107CD2B709D84003CDC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3A8884C92B287C7200C49B69 /* MoodJiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodJiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8884D02B287C7300C49B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -104,18 +169,13 @@
 		3AA76CFE2B6F351F00C0B98C /* SizeStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeStyles.swift; sourceTree = "<group>"; };
 		3AA76D002B6F351F00C0B98C /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		3AA76D012B6F351F00C0B98C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3AA76D022B6F351F00C0B98C /* Guides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guides.swift; sourceTree = "<group>"; };
 		3AA76D032B6F351F00C0B98C /* MoodJiTestApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodJiTestApp.swift; sourceTree = "<group>"; };
 		3AA76D102B6F351F00C0B98C /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		3AA76D112B6F351F00C0B98C /* ColorStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyles.swift; sourceTree = "<group>"; };
 		3AA76D122B6F351F00C0B98C /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		3AA76D132B6F351F00C0B98C /* DCMp4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCMp4.swift; sourceTree = "<group>"; };
-		3AA76D142B6F351F00C0B98C /* ScheduleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleSet.swift; sourceTree = "<group>"; };
 		3AA76D152B6F351F00C0B98C /* RibbonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RibbonView.swift; sourceTree = "<group>"; };
-		3AA76D162B6F352000C0B98C /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
-		3AA76D172B6F352000C0B98C /* ScheduleBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBean.swift; sourceTree = "<group>"; };
 		3AA76D182B6F352000C0B98C /* GlobleTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobleTools.swift; sourceTree = "<group>"; };
-		3AA76D192B6F352000C0B98C /* ScheduleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A277FCA2B6F37610006D76B /* SnapKit in Frameworks */,
+				3A277FCF2B6F3A470006D76B /* SDWebImageLottieCoder in Frameworks */,
 				3A277FCC2B6F37610006D76B /* SnapKit-Dynamic in Frameworks */,
+				3A8107B92B6F3D6B003CDC3D /* SwiftUIIntrospect in Frameworks */,
+				3A8107C52B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic in Frameworks */,
+				3A8107C82B7095BA003CDC3D /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,12 +196,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A277FFB2B6F3C460006D76B /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A277FD02B6F3ACA0006D76B /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				3A277FD12B6F3ACA0006D76B /* TimePicker.swift */,
+				3A277FD22B6F3ACA0006D76B /* Timeline.swift */,
+				3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */,
+				3A277FD42B6F3ACA0006D76B /* TimelineIntroduce.swift */,
+				3A277FD52B6F3ACA0006D76B /* TimelinesView.swift */,
+				3A277FD62B6F3ACA0006D76B /* TimelinesCell.swift */,
+				3A277FD72B6F3ACA0006D76B /* TimeCell.swift */,
+				3A277FD82B6F3ACA0006D76B /* TimeColorView.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		3A277FE12B6F3B8F0006D76B /* Lotti */ = {
+			isa = PBXGroup;
+			children = (
+				3A277FE62B6F3BC80006D76B /* fsc.json */,
+				3A277FE52B6F3BC80006D76B /* fsv.json */,
+				3A277FE72B6F3BC80006D76B /* fsx.json */,
+				3A277FE32B6F3BC80006D76B /* fsz.json */,
+				3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */,
+				3A277FE42B6F3BC80006D76B /* LottView.swift */,
+				3A277FE22B6F3BC80006D76B /* MoodJiTest WatchKit App-Bridging-Header.h */,
+			);
+			path = Lotti;
+			sourceTree = "<group>";
+		};
+		3A277FF92B6F3C460006D76B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A8884C02B287C7200C49B69 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +246,7 @@
 				3A8884DC2B287C7300C49B69 /* MoodJiTest WatchKit App */,
 				3A8884E82B287C7400C49B69 /* MoodJiTest WatchKit Extension */,
 				3A8884CA2B287C7200C49B69 /* Products */,
+				3A277FF92B6F3C460006D76B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,22 +263,18 @@
 		3A8884CB2B287C7200C49B69 /* MoodJiTest */ = {
 			isa = PBXGroup;
 			children = (
-				3AA76D112B6F351F00C0B98C /* ColorStyles.swift */,
-				3AA76D012B6F351F00C0B98C /* ContentView.swift */,
-				3AA76D132B6F351F00C0B98C /* DCMp4.swift */,
-				3AA76D182B6F352000C0B98C /* GlobleTools.swift */,
-				3AA76D022B6F351F00C0B98C /* Guides.swift */,
 				3AA76CFF2B6F351F00C0B98C /* Model */,
+				3A277FE12B6F3B8F0006D76B /* Lotti */,
+				3A277FD02B6F3ACA0006D76B /* Timeline */,
 				3AA76D032B6F351F00C0B98C /* MoodJiTestApp.swift */,
+				3AA76D012B6F351F00C0B98C /* ContentView.swift */,
+				3A8107C02B709423003CDC3D /* AggrementView.swift */,
+				3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */,
+				3A8107C22B7094E6003CDC3D /* HealthReq.swift */,
+				3A8107BE2B709351003CDC3D /* MainView.swift */,
 				3AA76D152B6F351F00C0B98C /* RibbonView.swift */,
-				3AA76D172B6F352000C0B98C /* ScheduleBean.swift */,
-				3AA76D192B6F352000C0B98C /* ScheduleList.swift */,
-				3AA76D142B6F351F00C0B98C /* ScheduleSet.swift */,
 				3AA76D122B6F351F00C0B98C /* Setting.swift */,
-				3AA76CFE2B6F351F00C0B98C /* SizeStyles.swift */,
-				3AA76D102B6F351F00C0B98C /* TextStyles.swift */,
-				3AA76D162B6F352000C0B98C /* TimePicker.swift */,
-				3A144C312B2B11E300496646 /* LaunchScreen.storyboard */,
+				3A8107CE2B709D84003CDC3D /* LaunchScreen.storyboard */,
 				3A8884D02B287C7300C49B69 /* Assets.xcassets */,
 				3A8884D52B287C7300C49B69 /* Info.plist */,
 				3A8884D22B287C7300C49B69 /* Preview Content */,
@@ -229,7 +327,15 @@
 		3AA76CFF2B6F351F00C0B98C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3AA76D132B6F351F00C0B98C /* DCMp4.swift */,
+				3AA76D182B6F352000C0B98C /* GlobleTools.swift */,
+				3A8107BA2B6F3F19003CDC3D /* FlexibleView.swift */,
+				3A8107CA2B709B11003CDC3D /* ShiningView.swift */,
+				3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */,
 				3AA76D002B6F351F00C0B98C /* Tab.swift */,
+				3AA76CFE2B6F351F00C0B98C /* SizeStyles.swift */,
+				3AA76D102B6F351F00C0B98C /* TextStyles.swift */,
+				3AA76D112B6F351F00C0B98C /* ColorStyles.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +351,7 @@
 				3A8884C62B287C7200C49B69 /* Frameworks */,
 				3A8884C72B287C7200C49B69 /* Resources */,
 				3A8885032B287C7400C49B69 /* Embed Watch Content */,
+				3A8107C92B7095BA003CDC3D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +362,10 @@
 			packageProductDependencies = (
 				3A277FC92B6F37610006D76B /* SnapKit */,
 				3A277FCB2B6F37610006D76B /* SnapKit-Dynamic */,
+				3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */,
+				3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */,
+				3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */,
+				3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */,
 			);
 			productName = MoodJiTest;
 			productReference = 3A8884C92B287C7200C49B69 /* MoodJiTest.app */;
@@ -290,6 +401,9 @@
 			dependencies = (
 			);
 			name = "MoodJiTest WatchKit Extension";
+			packageProductDependencies = (
+				3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */,
+			);
 			productName = "MoodJiTest WatchKit Extension";
 			productReference = 3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -309,6 +423,7 @@
 					};
 					3A8884D72B287C7300C49B69 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1510;
 					};
 					3A8884E32B287C7400C49B69 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -316,16 +431,19 @@
 				};
 			};
 			buildConfigurationList = 3A8884C42B287C7200C49B69 /* Build configuration list for PBXProject "MoodJiTest" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 3A8884C02B287C7200C49B69;
 			packageReferences = (
 				3A277FC82B6F37610006D76B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+				3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = 3A8884CA2B287C7200C49B69 /* Products */;
 			projectDirPath = "";
@@ -343,9 +461,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A144C322B2B11E300496646 /* LaunchScreen.storyboard in Resources */,
+				3A8107CC2B709D84003CDC3D /* LaunchScreen.storyboard in Resources */,
 				3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */,
+				3A8107D12B709DDE003CDC3D /* Localizable.xcstrings in Resources */,
+				3A277FF12B6F3BC90006D76B /* fsc.json in Resources */,
 				3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */,
+				3A277FEE2B6F3BC90006D76B /* fsv.json in Resources */,
+				3A277FE92B6F3BC90006D76B /* fsz.json in Resources */,
+				3A277FF42B6F3BC90006D76B /* fsx.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +476,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A277FF22B6F3BC90006D76B /* fsc.json in Resources */,
 				3A8884DE2B287C7400C49B69 /* Assets.xcassets in Resources */,
+				3A8107D22B709DDE003CDC3D /* Localizable.xcstrings in Resources */,
+				3A277FEA2B6F3BC90006D76B /* fsz.json in Resources */,
+				3A277FF52B6F3BC90006D76B /* fsx.json in Resources */,
+				3A277FEF2B6F3BC90006D76B /* fsv.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +491,11 @@
 			files = (
 				3A8884F72B287C7400C49B69 /* Preview Assets.xcassets in Resources */,
 				3A8884F42B287C7400C49B69 /* Assets.xcassets in Resources */,
+				3A277FEB2B6F3BC90006D76B /* fsz.json in Resources */,
+				3A277FF32B6F3BC90006D76B /* fsc.json in Resources */,
+				3A277FF02B6F3BC90006D76B /* fsv.json in Resources */,
+				3A8107D32B709DDE003CDC3D /* Localizable.xcstrings in Resources */,
+				3A277FF62B6F3BC90006D76B /* fsx.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,21 +506,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA76D252B6F352000C0B98C /* TimePicker.swift in Sources */,
 				3AA76D222B6F352000C0B98C /* DCMp4.swift in Sources */,
+				3A277FDF2B6F3ACA0006D76B /* TimeCell.swift in Sources */,
+				3A8107BD2B6F3F19003CDC3D /* MCGCDTimer.swift in Sources */,
 				3AA76D1F2B6F352000C0B98C /* TextStyles.swift in Sources */,
-				3AA76D1D2B6F352000C0B98C /* Guides.swift in Sources */,
-				3AA76D262B6F352000C0B98C /* ScheduleBean.swift in Sources */,
-				3AA76D232B6F352000C0B98C /* ScheduleSet.swift in Sources */,
+				3A8107BC2B6F3F19003CDC3D /* FlexibleView.swift in Sources */,
+				3A277FDB2B6F3ACA0006D76B /* TimelineEditView.swift in Sources */,
 				3AA76D202B6F352000C0B98C /* ColorStyles.swift in Sources */,
-				3AA76D282B6F352000C0B98C /* ScheduleList.swift in Sources */,
+				3A8107C32B7094E6003CDC3D /* HealthReq.swift in Sources */,
+				3A277FDC2B6F3ACA0006D76B /* TimelineIntroduce.swift in Sources */,
+				3A277FD92B6F3ACA0006D76B /* TimePicker.swift in Sources */,
 				3AA76D1A2B6F352000C0B98C /* SizeStyles.swift in Sources */,
+				3A277FDA2B6F3ACA0006D76B /* Timeline.swift in Sources */,
+				3A8107C12B709423003CDC3D /* AggrementView.swift in Sources */,
 				3AA76D272B6F352000C0B98C /* GlobleTools.swift in Sources */,
+				3A277FF72B6F3BC90006D76B /* LottieViewModel.swift in Sources */,
+				3A277FEC2B6F3BC90006D76B /* LottView.swift in Sources */,
 				3AA76D1B2B6F352000C0B98C /* Tab.swift in Sources */,
 				3AA76D1C2B6F352000C0B98C /* ContentView.swift in Sources */,
 				3AA76D212B6F352000C0B98C /* Setting.swift in Sources */,
 				3AA76D1E2B6F352000C0B98C /* MoodJiTestApp.swift in Sources */,
 				3AA76D242B6F352000C0B98C /* RibbonView.swift in Sources */,
+				3A8107CB2B709B11003CDC3D /* ShiningView.swift in Sources */,
+				3A8107BF2B709351003CDC3D /* MainView.swift in Sources */,
+				3A277FE02B6F3ACA0006D76B /* TimeColorView.swift in Sources */,
+				3A277FDE2B6F3ACA0006D76B /* TimelinesCell.swift in Sources */,
+				3A277FDD2B6F3ACA0006D76B /* TimelinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +542,8 @@
 				3A8884EE2B287C7400C49B69 /* NotificationController.swift in Sources */,
 				3A8884EC2B287C7400C49B69 /* ContentView.swift in Sources */,
 				3A8884F22B287C7400C49B69 /* ComplicationController.swift in Sources */,
+				3A277FED2B6F3BC90006D76B /* LottView.swift in Sources */,
+				3A277FF82B6F3BC90006D76B /* LottieViewModel.swift in Sources */,
 				3A8884EA2B287C7400C49B69 /* MoodJiTestApp.swift in Sources */,
 				3A8884F02B287C7400C49B69 /* NotificationView.swift in Sources */,
 			);
@@ -417,6 +563,17 @@
 			targetProxy = 3A8884E62B287C7400C49B69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A8107CE2B709D84003CDC3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A8107CD2B709D84003CDC3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A8884FA2B287C7400C49B69 /* Debug */ = {
@@ -548,13 +705,13 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -572,14 +729,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -589,17 +746,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3R22EYM38;
 				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
 				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MoodJiTest/Lotti/MoodJiTest WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -609,18 +769,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3R22EYM38;
 				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
 				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MoodJiTest/Lotti/MoodJiTest WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -632,15 +794,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W3R22EYM38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "MoodJiTest/MoodJiTest-Bridging-Header.h";
@@ -658,15 +820,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W3R22EYM38;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MoodJiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "MoodJiTest/MoodJiTest-Bridging-Header.h";
@@ -726,6 +888,22 @@
 				kind = branch;
 			};
 		};
+		3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/swiftui-introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -738,6 +916,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A277FC82B6F37610006D76B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+		3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+		3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
+		};
+		3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Dynamic";
+		};
+		3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Static";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

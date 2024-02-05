@@ -275,4 +275,18 @@ public class SizeStylesWatch41: SizeStylesProtocal {
 }
 
 
+var sizeStyles: SizeStylesProtocal = SizeStylesPro()
+func selectSizeStyles() -> SizeStylesProtocal {
+    let screenSize = UIScreen.main.bounds
 
+    var selected: SizeStylesProtocal = SizeStylesPro()
+    if screenSize.width <= 380 {
+        selected = SizeStylesMini()
+    } else if screenSize.width <= 420 {
+        selected = SizeStylesPro()
+    } else {
+        selected = SizeStylesProMax()
+    }
+
+    return selected
+}

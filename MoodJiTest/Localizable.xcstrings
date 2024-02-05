@@ -1,0 +1,207 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@"
+          }
+        }
+      }
+    },
+    "%@:%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@:%2$@"
+          }
+        }
+      }
+    },
+    "+" : {
+
+    },
+    "07:00 " : {
+
+    },
+    "09:00 " : {
+
+    },
+    "13:00 - 14:00 " : {
+
+    },
+    "18:00 " : {
+
+    },
+    "21:00 - 22:00" : {
+
+    },
+    "23:00" : {
+
+    },
+    "Add Routine" : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Bedtime" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Delete Routine" : {
+
+    },
+    "Does not meet your sleep goal" : {
+
+    },
+    "Edit" : {
+
+    },
+    "End" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "My Routine 1" : {
+
+    },
+    "Nap" : {
+
+    },
+    "NAP" : {
+
+    },
+    "No Routine Set For %@" : {
+
+    },
+    "Off Work" : {
+
+    },
+    "Please Set Routines For %@" : {
+
+    },
+    "Routines" : {
+
+    },
+    "Save" : {
+
+    },
+    "Schedule" : {
+
+    },
+    "Set to Auto will follow system appearance" : {
+
+    },
+    "Set your schedule to know you better" : {
+
+    },
+    "SLEEP" : {
+
+    },
+    "Start" : {
+
+    },
+    "Study" : {
+
+    },
+    "STUDY" : {
+
+    },
+    "SwiftUI View Position" : {
+
+    },
+    "Tell Moodji your routines to know you better. Don't worry, an approximate time is enough" : {
+
+    },
+    "The screen time of the selected App will be automatically counted as focused" : {
+
+    },
+    "Wake Up" : {
+
+    },
+    "Weekday.Friday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "F"
+          }
+        }
+      }
+    },
+    "Weekday.Monday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "M"
+          }
+        }
+      }
+    },
+    "Weekday.Satauday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S"
+          }
+        }
+      }
+    },
+    "Weekday.Sunday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S"
+          }
+        }
+      }
+    },
+    "Weekday.Thursday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T"
+          }
+        }
+      }
+    },
+    "Weekday.Tuesday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T"
+          }
+        }
+      }
+    },
+    "Weekday.Wensday.short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W"
+          }
+        }
+      }
+    },
+    "Work" : {
+
+    },
+    "WORK" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,12 +1,48 @@
 {
   "pins" : [
     {
+      "identity" : "librlottie-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/librlottie-Xcode.git",
+      "state" : {
+        "revision" : "4ae1ba205910c804ee2d4cd7dd7f122964fe3aad",
+        "version" : "0.2.1"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "59730af512c06fb569c119d737df4c1c499e001d",
+        "version" : "5.18.10"
+      }
+    },
+    {
+      "identity" : "sdwebimagelottiecoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageLottieCoder",
+      "state" : {
+        "revision" : "c9f65679a9b0510b89673507f548a7c0f17ba95f",
+        "version" : "0.2.0"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",
       "state" : {
         "branch" : "develop",
         "revision" : "4478b2234e85c36b9f2c855d909037dc4dc08eda"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/swiftui-introspect",
+      "state" : {
+        "revision" : "18e965f867e37a558ad13c12d330dbe047099180",
+        "version" : "1.1.2"
       }
     }
   ],
