@@ -68,5 +68,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74A739D8-42E8-40AB-B759-9CC0077BFA68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoodJiTest/Trends/DataHandleSir.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "stepsOfday(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "74A739D8-42E8-40AB-B759-9CC0077BFA68 - 9d449ff408efec3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoodJiTest.DataHandleSir.stepsOfday(MoodJiTest.HealthDayBean, Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MoodJiTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zz/Documents/Aru/MoodJiTest/MoodJiTest/Trends/DataHandleSir.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "1472">
+               </Location>
+               <Location
+                  uuid = "74A739D8-42E8-40AB-B759-9CC0077BFA68 - 3f9b10b28eb73267"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MoodJiTest.DataHandleSir.stepsOfday(MoodJiTest.HealthDayBean, Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MoodJiTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zz/Documents/Aru/MoodJiTest/MoodJiTest/Trends/DataHandleSir.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B35712E3-2AC6-4329-B8FA-BD465AAD63B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoodJiTest/Trends/DataHandleSir.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "stepsOfday(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CBAED7D-EE7C-4B83-83F0-776F5679E798"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoodJiTest/Trends/DataHandleSir.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "stepsOfday(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4CBAED7D-EE7C-4B83-83F0-776F5679E798 - 3f9b10b28eb73378"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MoodJiTest.DataHandleSir.stepsOfday(MoodJiTest.HealthDayBean, Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MoodJiTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zz/Documents/Aru/MoodJiTest/MoodJiTest/Trends/DataHandleSir.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "2284">
+               </Location>
+               <Location
+                  uuid = "4CBAED7D-EE7C-4B83-83F0-776F5679E798 - 3f9b10b28eb73378"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.HKSampleQuery, Swift.Optional&lt;Swift.Array&lt;__C.HKSample&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MoodJiTest.DataHandleSir.stepsOfday(MoodJiTest.HealthDayBean, Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MoodJiTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zz/Documents/Aru/MoodJiTest/MoodJiTest/Trends/DataHandleSir.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

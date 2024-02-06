@@ -15,12 +15,6 @@ struct TimelinesView: View {
     @State private var isPage = false
     @StateObject var mEnvBean = TimelineEnvBean()
 
-    private func saveDo() {
-        mEnvBean.isEditing = false
-        mEnvBean.toJsonAndUDSave()
-        navigator.wrappedValue.dismiss()
-    }
-
     func loadStart() {
 //        UserDefaults.standard.removeObject(forKey: timeLinesUDName)
         mEnvBean.loadStart()
@@ -53,7 +47,6 @@ struct TimelinesView: View {
                 .animation(.spring)
             }
             .navigationBarTitle("Routines", displayMode: .inline)
-            .navigationBarItems(leading: leftBtn, trailing: rightBtn)
             .padding(.top, sizeStyles.spacingXs)
             .padding(.bottom, sizeStyles.paddingL)
             .padding(.horizontal, sizeStyles.paddingM)
@@ -61,39 +54,10 @@ struct TimelinesView: View {
             .background(Color(UIColor.systemGroupedBackground))
         }
         .environmentObject(mEnvBean)
-        .interactiveDismissDisabled(isEditing)
+        .interactiveDismissDisabled(!mEnvBean.findBalnkWeekidx().isEmpty)
         .onAppear {
             loadStart()
         }
-    }
-
-    private var isEditing: Bool {
-        mEnvBean.isChangedWeekidx() || !mEnvBean.findBalnkWeekidx().isEmpty || mEnvBean.isEditing
-    }
-
-    private var leftBtn: some View {
-        Button(action: {
-            rigidDo()
-            navigator.wrappedValue.dismiss()
-        }) {
-            Text("Cancel")
-                .font(.system(size: 17).weight(.regular))
-                .foregroundColor(accentScreenTime)
-        }
-        .opacity(isEditing ? 1 : 0)
-    }
-
-    private var rightBtn: some View {
-        Button(action: {
-            rigidDo()
-            saveDo()
-        }) {
-            Text("Save")
-                .font(.system(size: 17).weight(.semibold))
-                .foregroundColor(mEnvBean.findBalnkWeekidx().isEmpty ? accentScreenTime : Color(UIColor.systemFill))
-        }
-        .opacity(isEditing ? 1 : 0)
-        .allowsHitTesting(mEnvBean.findBalnkWeekidx().isEmpty)
     }
 
     private var addBtn: some View {

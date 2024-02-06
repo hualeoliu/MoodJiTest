@@ -48,7 +48,7 @@ class LottieViewModel: ObservableObject {
     /// Set current animation
     private func setImage(frame: UInt) {
         if let coder = coder, let uiImage = coder.animatedImageFrame(at: frame) {
-            print("paf2 ", uiImage)
+//            print("paf2 ", uiImage)
             self.image = uiImage
         }
     }

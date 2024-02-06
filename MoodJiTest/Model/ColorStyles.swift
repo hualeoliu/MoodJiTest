@@ -86,3 +86,32 @@ extension String {
     
 }
 
+
+
+#if os(iOS)
+public extension Color {
+    static let lightText = Color(UIColor.lightText)
+    static let darkText = Color(UIColor.darkText)
+
+    static let label = Color(UIColor.label)
+    static let secondaryLabel = Color(UIColor.secondaryLabel)
+    static let tertiaryLabel = Color(UIColor.tertiaryLabel)
+    static let quaternaryLabel = Color(UIColor.quaternaryLabel)
+
+    static let systemBackground = Color(UIColor.systemBackground)
+    static let secondarySystemBackground = Color(UIColor.secondarySystemBackground)
+    static let tertiarySystemBackground = Color(UIColor.tertiarySystemBackground)
+    static let systemFill = Color(UIColor.systemFill)
+
+    static let separator = Color(UIColor.separator)
+
+    static let systemGroupedBackground = Color(UIColor.systemGroupedBackground)
+    static let secondarySystemGroupedBackground = Color(UIColor.secondarySystemGroupedBackground)
+}
+#elseif os(watchOS)
+public extension Color {
+    static let label = Color.primary
+    static let secondaryLabel = Color.secondary
+    static let systemFill = Color(.displayP3, red: 0.47, green: 0.47, blue: 0.5, opacity: 0.36)
+}
+#endif

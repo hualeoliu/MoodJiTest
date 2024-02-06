@@ -8,11 +8,6 @@
 import Foundation
 import SwiftUI
 
-class MainColorModel: ObservableObject {
-    @Published var colorOption = 0//0auto  1dark 2light
-    @Published var timeType = 0// sleep or work
-}
-
 let mainColorSet = "mainColorSet"
 let sleepTimeArr = "sleepTimeArr"
 let workTimeArr = "workTimeArr"

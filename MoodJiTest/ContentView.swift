@@ -53,7 +53,6 @@ struct ContentView: View {
                 }
             }
         }
-        .preferredColorScheme(.dark)
     }
 
     @ViewBuilder

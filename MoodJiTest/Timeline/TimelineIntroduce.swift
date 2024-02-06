@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TimelineIntroduce: View {
-    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var navigator
     @Binding<[IntroViewType]> var path: [IntroViewType]
 
@@ -237,7 +236,7 @@ struct TimelineIntroduce: View {
             ScrollView(showsIndicators: false) {
                 if mEnvBean.times.filter(\.isReal).isEmpty {
                     VStack(alignment: .leading, spacing: 0) {
-                        Image(colorScheme == .dark ? "time_line_dark" : "time_line")
+                        Image("time_line_dark")
                             .resizable()
                             .scaledToFit()
 //                            .padding(.bottom, sizeStyles.spacingS)

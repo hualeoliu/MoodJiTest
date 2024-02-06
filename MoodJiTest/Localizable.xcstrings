@@ -1,6 +1,18 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " bpm" : {
+      "comment" : "formatHeartRate"
+    },
+    " steps" : {
+      "comment" : "formatSteps"
+    },
+    "%@" : {
+
+    },
+    "%@ week" : {
+
+    },
     "%@: %@" : {
       "localizations" : {
         "en" : {
@@ -17,6 +29,17 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@:%2$@"
+          }
+        }
+      }
+    },
+    "%@%" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$"
           }
         }
       }
@@ -45,13 +68,22 @@
     "Add Routine" : {
 
     },
-    "Appearance" : {
+    "AVG" : {
+
+    },
+    "Awake" : {
 
     },
     "Bedtime" : {
 
     },
     "Cancel" : {
+
+    },
+    "Core" : {
+
+    },
+    "Deep" : {
 
     },
     "Delete Routine" : {
@@ -66,7 +98,28 @@
     "End" : {
 
     },
+    "FRI" : {
+
+    },
+    "h-trends" : {
+
+    },
+    "HeartRate" : {
+
+    },
     "Hello, World!" : {
+
+    },
+    "InBed" : {
+
+    },
+    "Last Week" : {
+
+    },
+    "m-trends" : {
+
+    },
+    "MON" : {
 
     },
     "My Routine 1" : {
@@ -87,16 +140,19 @@
     "Please Set Routines For %@" : {
 
     },
+    "REM" : {
+
+    },
     "Routines" : {
 
     },
-    "Save" : {
+    "SAT" : {
 
     },
     "Schedule" : {
 
     },
-    "Set to Auto will follow system appearance" : {
+    "Select One To Show Trends" : {
 
     },
     "Set your schedule to know you better" : {
@@ -105,13 +161,22 @@
     "SLEEP" : {
 
     },
+    "SleepScreenTime" : {
+
+    },
     "Start" : {
+
+    },
+    "Steps" : {
 
     },
     "Study" : {
 
     },
     "STUDY" : {
+
+    },
+    "SUN" : {
 
     },
     "SwiftUI View Position" : {
@@ -123,7 +188,19 @@
     "The screen time of the selected App will be automatically counted as focused" : {
 
     },
+    "THU" : {
+
+    },
+    "TimeInDaylight" : {
+
+    },
+    "TUE" : {
+
+    },
     "Wake Up" : {
+
+    },
+    "WED" : {
 
     },
     "Weekday.Friday.short" : {
@@ -195,6 +272,9 @@
           }
         }
       }
+    },
+    "WHRV" : {
+
     },
     "Work" : {
 

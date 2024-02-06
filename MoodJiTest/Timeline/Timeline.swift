@@ -13,7 +13,6 @@ import SwiftUI
 class TimelineEnvBean: ObservableObject {
     @Published var times: [TimelineBean] = []
     var timeDatas: [TimelineDataBean] = []
-    var isEditing = false
 
     func loadStart() {
         if let data = UserDefaults.standard.value(forKey: timeLinesUDName) as? String {
@@ -44,7 +43,6 @@ class TimelineEnvBean: ObservableObject {
 
         times.forEach { t in
             t.weekIdxs = t.weekIdxs.sorted()
-            t.weekIdxsLast = t.weekIdxs
         }
         times = times.sorted(by: { $0.weekIdxs.first ?? 7 < $1.weekIdxs.first ?? 7 })
 
@@ -60,16 +58,6 @@ class TimelineEnvBean: ObservableObject {
             }
         }
         return str
-    }
-
-    func isChangedWeekidx() -> Bool {
-        var isChange = false
-        times.forEach { t in
-            if t.weekIdxs != t.weekIdxsLast {
-                isChange = true
-            }
-        }
-        return isChange
     }
 
     func findBalnkWeekidx() -> [Int] {
@@ -153,7 +141,6 @@ class TimelineBean: ObservableObject, Identifiable, Equatable {
     @Published var name: String = ""
     var cells: [TimeCellBean] = [TimeCellBean()]
     @Published var weekIdxs: [Int] = []
-    @Published var weekIdxsLast: [Int] = []
 
     static func == (lhs: TimelineBean, rhs: TimelineBean) -> Bool {
         return lhs.id == rhs.id

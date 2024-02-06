@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A277FCA2B6F37610006D76B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FC92B6F37610006D76B /* SnapKit */; };
-		3A277FCC2B6F37610006D76B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FCB2B6F37610006D76B /* SnapKit-Dynamic */; };
-		3A277FCF2B6F3A470006D76B /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */; };
 		3A277FD92B6F3ACA0006D76B /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD12B6F3ACA0006D76B /* TimePicker.swift */; };
 		3A277FDA2B6F3ACA0006D76B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD22B6F3ACA0006D76B /* Timeline.swift */; };
 		3A277FDB2B6F3ACA0006D76B /* TimelineEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */; };
@@ -34,20 +32,22 @@
 		3A277FF62B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
 		3A277FF72B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
 		3A277FF82B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
-		3A277FFB2B6F3C460006D76B /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */; };
-		3A8107B92B6F3D6B003CDC3D /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */; };
+		3A489E642B7274740046ECB5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E632B7274740046ECB5 /* SDWebImageLottieCoder */; };
+		3A489E662B72748A0046ECB5 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E652B72748A0046ECB5 /* SwiftUIIntrospect */; };
+		3A489E682B7274980046ECB5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E672B7274980046ECB5 /* SDWebImageLottieCoder */; };
 		3A8107BC2B6F3F19003CDC3D /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BA2B6F3F19003CDC3D /* FlexibleView.swift */; };
 		3A8107BD2B6F3F19003CDC3D /* MCGCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */; };
 		3A8107BF2B709351003CDC3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BE2B709351003CDC3D /* MainView.swift */; };
 		3A8107C12B709423003CDC3D /* AggrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107C02B709423003CDC3D /* AggrementView.swift */; };
 		3A8107C32B7094E6003CDC3D /* HealthReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107C22B7094E6003CDC3D /* HealthReq.swift */; };
-		3A8107C52B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */; };
-		3A8107C82B7095BA003CDC3D /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */; };
 		3A8107CB2B709B11003CDC3D /* ShiningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107CA2B709B11003CDC3D /* ShiningView.swift */; };
 		3A8107CC2B709D84003CDC3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107CE2B709D84003CDC3D /* LaunchScreen.storyboard */; };
 		3A8107D12B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
 		3A8107D22B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
 		3A8107D32B709DDE003CDC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */; };
+		3A8107D82B709FCB003CDC3D /* DataHandleSir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107D52B709FCB003CDC3D /* DataHandleSir.swift */; };
+		3A8107D92B709FCB003CDC3D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107D62B709FCB003CDC3D /* LineChartView.swift */; };
+		3A8107DA2B709FCB003CDC3D /* ReportTrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107D72B709FCB003CDC3D /* ReportTrendView.swift */; };
 		3A8884D12B287C7300C49B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D02B287C7300C49B69 /* Assets.xcassets */; };
 		3A8884D42B287C7300C49B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */; };
 		3A8884D92B287C7300C49B69 /* MoodJiTest WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3A8884D82B287C7300C49B69 /* MoodJiTest WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -148,6 +148,10 @@
 		3A8107CA2B709B11003CDC3D /* ShiningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiningView.swift; sourceTree = "<group>"; };
 		3A8107CD2B709D84003CDC3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8107D02B709DDE003CDC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3A8107D52B709FCB003CDC3D /* DataHandleSir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandleSir.swift; sourceTree = "<group>"; };
+		3A8107D62B709FCB003CDC3D /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		3A8107D72B709FCB003CDC3D /* ReportTrendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTrendView.swift; sourceTree = "<group>"; };
+		3A8107DB2B70E4E2003CDC3D /* MoodJiTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodJiTest.entitlements; sourceTree = "<group>"; };
 		3A8884C92B287C7200C49B69 /* MoodJiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodJiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8884D02B287C7300C49B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8884D32B287C7300C49B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -184,11 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A277FCA2B6F37610006D76B /* SnapKit in Frameworks */,
-				3A277FCF2B6F3A470006D76B /* SDWebImageLottieCoder in Frameworks */,
-				3A277FCC2B6F37610006D76B /* SnapKit-Dynamic in Frameworks */,
-				3A8107B92B6F3D6B003CDC3D /* SwiftUIIntrospect in Frameworks */,
-				3A8107C52B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				3A8107C82B7095BA003CDC3D /* SwiftUIIntrospect-Static in Frameworks */,
+				3A489E682B7274980046ECB5 /* SDWebImageLottieCoder in Frameworks */,
+				3A489E662B72748A0046ECB5 /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A277FFB2B6F3C460006D76B /* SDWebImageLottieCoder in Frameworks */,
+				3A489E642B7274740046ECB5 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +207,14 @@
 		3A277FD02B6F3ACA0006D76B /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				3A277FD12B6F3ACA0006D76B /* TimePicker.swift */,
 				3A277FD22B6F3ACA0006D76B /* Timeline.swift */,
-				3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */,
-				3A277FD42B6F3ACA0006D76B /* TimelineIntroduce.swift */,
 				3A277FD52B6F3ACA0006D76B /* TimelinesView.swift */,
 				3A277FD62B6F3ACA0006D76B /* TimelinesCell.swift */,
 				3A277FD72B6F3ACA0006D76B /* TimeCell.swift */,
+				3A277FD32B6F3ACA0006D76B /* TimelineEditView.swift */,
+				3A277FD42B6F3ACA0006D76B /* TimelineIntroduce.swift */,
 				3A277FD82B6F3ACA0006D76B /* TimeColorView.swift */,
+				3A277FD12B6F3ACA0006D76B /* TimePicker.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -237,6 +238,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A8107D42B709FB3003CDC3D /* Trends */ = {
+			isa = PBXGroup;
+			children = (
+				3A8107D52B709FCB003CDC3D /* DataHandleSir.swift */,
+				3A8107D62B709FCB003CDC3D /* LineChartView.swift */,
+				3A8107D72B709FCB003CDC3D /* ReportTrendView.swift */,
+			);
+			path = Trends;
 			sourceTree = "<group>";
 		};
 		3A8884C02B287C7200C49B69 = {
@@ -263,9 +274,11 @@
 		3A8884CB2B287C7200C49B69 /* MoodJiTest */ = {
 			isa = PBXGroup;
 			children = (
+				3A8107DB2B70E4E2003CDC3D /* MoodJiTest.entitlements */,
 				3AA76CFF2B6F351F00C0B98C /* Model */,
 				3A277FE12B6F3B8F0006D76B /* Lotti */,
 				3A277FD02B6F3ACA0006D76B /* Timeline */,
+				3A8107D42B709FB3003CDC3D /* Trends */,
 				3AA76D032B6F351F00C0B98C /* MoodJiTestApp.swift */,
 				3AA76D012B6F351F00C0B98C /* ContentView.swift */,
 				3A8107C02B709423003CDC3D /* AggrementView.swift */,
@@ -361,11 +374,8 @@
 			name = MoodJiTest;
 			packageProductDependencies = (
 				3A277FC92B6F37610006D76B /* SnapKit */,
-				3A277FCB2B6F37610006D76B /* SnapKit-Dynamic */,
-				3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */,
-				3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */,
-				3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */,
-				3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */,
+				3A489E652B72748A0046ECB5 /* SwiftUIIntrospect */,
+				3A489E672B7274980046ECB5 /* SDWebImageLottieCoder */,
 			);
 			productName = MoodJiTest;
 			productReference = 3A8884C92B287C7200C49B69 /* MoodJiTest.app */;
@@ -402,7 +412,7 @@
 			);
 			name = "MoodJiTest WatchKit Extension";
 			packageProductDependencies = (
-				3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */,
+				3A489E632B7274740046ECB5 /* SDWebImageLottieCoder */,
 			);
 			productName = "MoodJiTest WatchKit Extension";
 			productReference = 3A8884E42B287C7400C49B69 /* MoodJiTest WatchKit Extension.appex */;
@@ -506,8 +516,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8107D82B709FCB003CDC3D /* DataHandleSir.swift in Sources */,
 				3AA76D222B6F352000C0B98C /* DCMp4.swift in Sources */,
 				3A277FDF2B6F3ACA0006D76B /* TimeCell.swift in Sources */,
+				3A8107D92B709FCB003CDC3D /* LineChartView.swift in Sources */,
 				3A8107BD2B6F3F19003CDC3D /* MCGCDTimer.swift in Sources */,
 				3AA76D1F2B6F352000C0B98C /* TextStyles.swift in Sources */,
 				3A8107BC2B6F3F19003CDC3D /* FlexibleView.swift in Sources */,
@@ -532,6 +544,7 @@
 				3A277FE02B6F3ACA0006D76B /* TimeColorView.swift in Sources */,
 				3A277FDE2B6F3ACA0006D76B /* TimelinesCell.swift in Sources */,
 				3A277FDD2B6F3ACA0006D76B /* TimelinesView.swift in Sources */,
+				3A8107DA2B709FCB003CDC3D /* ReportTrendView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,7 +710,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MoodJiTest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -705,7 +718,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -721,7 +734,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MoodJiTest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,7 +742,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -748,10 +761,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
 				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -771,10 +784,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				IBSC_MODULE = MoodJiTest_WatchKit_Extension;
 				INFOPLIST_FILE = "MoodJiTest WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = leo.MjTest.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -792,9 +805,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MoodJiTest/MoodJiTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -818,9 +832,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MoodJiTest/MoodJiTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MoodJiTest/Preview Content\"";
-				DEVELOPMENT_TEAM = W3R22EYM38;
+				DEVELOPMENT_TEAM = 8GWK2ARYY2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MoodJiTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -884,8 +899,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
@@ -912,35 +927,20 @@
 			package = 3A277FC82B6F37610006D76B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		3A277FCB2B6F37610006D76B /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A277FC82B6F37610006D76B /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		3A277FCE2B6F3A470006D76B /* SDWebImageLottieCoder */ = {
+		3A489E632B7274740046ECB5 /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
 			productName = SDWebImageLottieCoder;
 		};
-		3A277FFA2B6F3C460006D76B /* SDWebImageLottieCoder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
-			productName = SDWebImageLottieCoder;
-		};
-		3A8107B82B6F3D6B003CDC3D /* SwiftUIIntrospect */ = {
+		3A489E652B72748A0046ECB5 /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
 			productName = SwiftUIIntrospect;
 		};
-		3A8107C42B7095BA003CDC3D /* SwiftUIIntrospect-Dynamic */ = {
+		3A489E672B7274980046ECB5 /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		3A8107C72B7095BA003CDC3D /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A8107B72B6F3D6B003CDC3D /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Static";
+			package = 3A277FCD2B6F3A470006D76B /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

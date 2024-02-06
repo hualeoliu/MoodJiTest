@@ -34,7 +34,6 @@ struct TimelineEditView: View {
 
         if mEnvBean.times.filter(\.isReal).isEmpty {
             mBean.weekIdxs = [0, 1, 2, 3, 4, 5, 6]
-            mBean.weekIdxsLast = mBean.weekIdxs
         }
         mBean.cells = mCells
         mBean.name = mName
@@ -212,11 +211,10 @@ struct TimelineEditView: View {
         .padding(.top, sizeStyles.spacingS)
         .containerShape(Rectangle())
         .onTapGesture {
-            rigidDo()
             mEnvBean.times.remove(at: mEnvBean.times.firstIndex(of: mBean)!)
-
-            mEnvBean.isEditing = true
+            mEnvBean.toJsonAndUDSave()
             navigator.wrappedValue.dismiss()
+            rigidDo()
         }
     }
 

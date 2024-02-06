@@ -70,12 +70,6 @@ struct TimelinesCell: View {
         if mEnvBean.findBalnkWeekidx().contains(idx) {
             return .clear
         }
-        if !mBean.weekIdxsLast.contains(idx) && mBean.weekIdxs.contains(idx) {
-            return accentScreenTime
-        }
-        if mBean.weekIdxsLast.contains(idx) && !mBean.weekIdxs.contains(idx) {
-            return accentWarning
-        }
         return mBean.weekIdxs.contains(idx) ? Color.clear : Color(UIColor.quaternaryLabel)
     }
 
@@ -111,6 +105,7 @@ struct TimelinesCell: View {
                 }
 
                 mEnvBean.refreshList()
+                mEnvBean.toJsonAndUDSave()
                 rigidDo()
             }
 
