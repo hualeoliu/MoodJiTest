@@ -72,21 +72,19 @@ struct LineChartView: View {
                             }
                         )
                 }
-                if Date().startOfDay.dayZero >= marker.day.dayZero {
-                    let curLine = getLine(marker, 1)
-                    curLine.symbol {
-                        let circleColor = currentColor.opacity(alpha)
-                        Circle()
-                            .strokeBorder(chartBgColor, lineWidth: 1.5)
-                            .frame(width: 10)
-                            .overlay(Circle()
-                                .stroke(circleColor, lineWidth: 2)
-                                .frame(width: 6)
-                                .background {
-                                    Circle().foregroundStyle(selectedElement == nil ? chartBgColor : (selectedElement?.day == marker.day ? currentColor : chartBgColor))
-                                }
-                            )
-                    }
+                let curLine = getLine(marker, 1)
+                curLine.symbol {
+                    let circleColor = currentColor.opacity(alpha)
+                    Circle()
+                        .strokeBorder(chartBgColor, lineWidth: 1.5)
+                        .frame(width: 10)
+                        .overlay(Circle()
+                            .stroke(circleColor, lineWidth: 2)
+                            .frame(width: 6)
+                            .background {
+                                Circle().foregroundStyle(selectedElement == nil ? chartBgColor : (selectedElement?.day == marker.day ? currentColor : chartBgColor))
+                            }
+                        )
                 }
             }
             

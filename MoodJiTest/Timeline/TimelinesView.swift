@@ -39,7 +39,9 @@ struct TimelinesView: View {
                         TimelinesCell(mBean: $element)
                     }
                     
-                    addBtn
+                    if mEnvBean.times.filter(\.isReal).count <= 3 {
+                        addBtn
+                    }
 
                     Spacer()
                 }

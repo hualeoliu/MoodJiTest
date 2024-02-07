@@ -19,17 +19,22 @@ extension View {
 
 private struct LottView: View { // 闪光效果
     let path: String
-    @ObservedObject var lott: LottieViewModel = .init()
+    @State var img = UIImage()
 
     var body: some View {
-        Image(uiImage: lott.image)
+        Image(uiImage: img)
             .resizable()
             .scaledToFit()
             .background(.pink.opacity(0.2))
             .onAppear {
                 print("paf ")
-                self.lott.loadAnimation(url: URL(fileURLWithPath: spath))
+                LottieSir.loadAnimation("fsc") { img in
+                    self.img = img
+                }
             }
+            .onDisappear(perform: {
+                LottieSir.stopAnim("fsc")
+            })
         .allowsHitTesting(false)
 
     }

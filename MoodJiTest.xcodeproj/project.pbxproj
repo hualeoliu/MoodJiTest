@@ -30,8 +30,6 @@
 		3A277FF42B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
 		3A277FF52B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
 		3A277FF62B6F3BC90006D76B /* fsx.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A277FE72B6F3BC80006D76B /* fsx.json */; };
-		3A277FF72B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
-		3A277FF82B6F3BC90006D76B /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */; };
 		3A489E642B7274740046ECB5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E632B7274740046ECB5 /* SDWebImageLottieCoder */; };
 		3A489E662B72748A0046ECB5 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E652B72748A0046ECB5 /* SwiftUIIntrospect */; };
 		3A489E682B7274980046ECB5 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 3A489E672B7274980046ECB5 /* SDWebImageLottieCoder */; };
@@ -70,6 +68,9 @@
 		3AA76D222B6F352000C0B98C /* DCMp4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D132B6F351F00C0B98C /* DCMp4.swift */; };
 		3AA76D242B6F352000C0B98C /* RibbonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D152B6F351F00C0B98C /* RibbonView.swift */; };
 		3AA76D272B6F352000C0B98C /* GlobleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA76D182B6F352000C0B98C /* GlobleTools.swift */; };
+		3AE5A6982B7328E900A3E070 /* LottieSir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A6972B7328E900A3E070 /* LottieSir.swift */; };
+		3AE5A6992B7328E900A3E070 /* LottieSir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5A6972B7328E900A3E070 /* LottieSir.swift */; };
+		3AE5A69A2B73298400A3E070 /* MCGCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +140,6 @@
 		3A277FE52B6F3BC80006D76B /* fsv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsv.json; sourceTree = "<group>"; };
 		3A277FE62B6F3BC80006D76B /* fsc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsc.json; sourceTree = "<group>"; };
 		3A277FE72B6F3BC80006D76B /* fsx.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fsx.json; sourceTree = "<group>"; };
-		3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		3A8107BA2B6F3F19003CDC3D /* FlexibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
 		3A8107BB2B6F3F19003CDC3D /* MCGCDTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCGCDTimer.swift; sourceTree = "<group>"; };
 		3A8107BE2B709351003CDC3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		3AA76D132B6F351F00C0B98C /* DCMp4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCMp4.swift; sourceTree = "<group>"; };
 		3AA76D152B6F351F00C0B98C /* RibbonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RibbonView.swift; sourceTree = "<group>"; };
 		3AA76D182B6F352000C0B98C /* GlobleTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobleTools.swift; sourceTree = "<group>"; };
+		3AE5A6972B7328E900A3E070 /* LottieSir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieSir.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +227,8 @@
 				3A277FE52B6F3BC80006D76B /* fsv.json */,
 				3A277FE72B6F3BC80006D76B /* fsx.json */,
 				3A277FE32B6F3BC80006D76B /* fsz.json */,
-				3A277FE82B6F3BC90006D76B /* LottieViewModel.swift */,
 				3A277FE42B6F3BC80006D76B /* LottView.swift */,
+				3AE5A6972B7328E900A3E070 /* LottieSir.swift */,
 				3A277FE22B6F3BC80006D76B /* MoodJiTest WatchKit App-Bridging-Header.h */,
 			);
 			path = Lotti;
@@ -532,7 +533,6 @@
 				3A277FDA2B6F3ACA0006D76B /* Timeline.swift in Sources */,
 				3A8107C12B709423003CDC3D /* AggrementView.swift in Sources */,
 				3AA76D272B6F352000C0B98C /* GlobleTools.swift in Sources */,
-				3A277FF72B6F3BC90006D76B /* LottieViewModel.swift in Sources */,
 				3A277FEC2B6F3BC90006D76B /* LottView.swift in Sources */,
 				3AA76D1B2B6F352000C0B98C /* Tab.swift in Sources */,
 				3AA76D1C2B6F352000C0B98C /* ContentView.swift in Sources */,
@@ -542,6 +542,7 @@
 				3A8107CB2B709B11003CDC3D /* ShiningView.swift in Sources */,
 				3A8107BF2B709351003CDC3D /* MainView.swift in Sources */,
 				3A277FE02B6F3ACA0006D76B /* TimeColorView.swift in Sources */,
+				3AE5A6982B7328E900A3E070 /* LottieSir.swift in Sources */,
 				3A277FDE2B6F3ACA0006D76B /* TimelinesCell.swift in Sources */,
 				3A277FDD2B6F3ACA0006D76B /* TimelinesView.swift in Sources */,
 				3A8107DA2B709FCB003CDC3D /* ReportTrendView.swift in Sources */,
@@ -554,9 +555,10 @@
 			files = (
 				3A8884EE2B287C7400C49B69 /* NotificationController.swift in Sources */,
 				3A8884EC2B287C7400C49B69 /* ContentView.swift in Sources */,
+				3AE5A69A2B73298400A3E070 /* MCGCDTimer.swift in Sources */,
 				3A8884F22B287C7400C49B69 /* ComplicationController.swift in Sources */,
+				3AE5A6992B7328E900A3E070 /* LottieSir.swift in Sources */,
 				3A277FED2B6F3BC90006D76B /* LottView.swift in Sources */,
-				3A277FF82B6F3BC90006D76B /* LottieViewModel.swift in Sources */,
 				3A8884EA2B287C7400C49B69 /* MoodJiTestApp.swift in Sources */,
 				3A8884F02B287C7400C49B69 /* NotificationView.swift in Sources */,
 			);
@@ -724,7 +726,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -749,7 +751,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -772,7 +774,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -795,7 +797,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

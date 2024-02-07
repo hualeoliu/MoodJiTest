@@ -37,3 +37,6 @@ func afterDo(_ afterTime: Double, _ doSome: @escaping (()->())) {
 }
 
 
+func rigidDo() {
+    UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+}

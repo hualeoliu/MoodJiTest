@@ -15,6 +15,8 @@ class TimelineEnvBean: ObservableObject {
     var timeDatas: [TimelineDataBean] = []
 
     func loadStart() {
+        times = []
+//        UserDefaults.standard.removeObject(forKey: timeLinesUDName)
         if let data = UserDefaults.standard.value(forKey: timeLinesUDName) as? String {
             let json = data.data(using: .utf8)!
             do {

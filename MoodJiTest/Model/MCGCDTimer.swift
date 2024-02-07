@@ -51,6 +51,3 @@ class MCGCDTimer {//计时器工具
     
 }
 
-func rigidDo() {
-    UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
-}

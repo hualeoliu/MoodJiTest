@@ -140,9 +140,9 @@ struct ReportTrendView: View {
                     Text(weekday)
                         .font(TextStyles.subHeadline)
                         .foregroundColor(Color(UIColor.secondaryLabel))
+                        .offset(y: 6)
                     Spacer()
                 }
-                .offset(y: 8)
             }
             
             VStack(alignment: .leading, spacing: 6) {//cur

@@ -150,12 +150,15 @@ class DataHandleSir: NSObject {
                 afterDo(0.1) {
                     dataTrend.forEach { mod in
                         switch trendIndex {
+                        case 0:
+                            mod.sales = (mod.daySleep.stepNum)
+                            mod.salesLast = (mod.dayLastSleep.stepNum)
                         case 3:
                             mod.sales = (mod.daySleep.bedSec)
                             mod.salesLast = (mod.dayLastSleep.bedSec)
                         default:
-                            mod.sales = (mod.daySleep.stepNum)
-                            mod.salesLast = (mod.dayLastSleep.stepNum)
+                            mod.sales = (mod.daySleep.vuSec)
+                            mod.salesLast = (mod.dayLastSleep.vuSec)
                         }
                     }
                     DataHandleSir.setYAxisValue(false, trendIndex, dataTrend)
